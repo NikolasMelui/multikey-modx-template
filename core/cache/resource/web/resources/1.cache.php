@@ -15,12 +15,8 @@
     'unpub_date' => 0,
     'parent' => 0,
     'isfolder' => 0,
-    'introtext' => NULL,
-    'content' => '<p>You have successfully installed MODX Revolution&nbsp;[[++settings_version]]!</p>
-<p>Now that MODX is installed you can login to the manager to create your templates, manage content and install third party extras to add functionality to your&nbsp;website. </p>
-
-<h2>New to&nbsp;MODX?</h2>
-',
+    'introtext' => '',
+    'content' => '[[$hello]]',
     'richtext' => 1,
     'template' => 1,
     'menuindex' => 0,
@@ -28,8 +24,8 @@
     'cacheable' => 1,
     'createdby' => 1,
     'createdon' => 1518721462,
-    'editedby' => 0,
-    'editedon' => 0,
+    'editedby' => 1,
+    'editedon' => 1518723516,
     'deleted' => 0,
     'deletedon' => 0,
     'deletedby' => 0,
@@ -44,7 +40,7 @@
     'class_key' => 'modDocument',
     'context_key' => 'web',
     'content_type' => 1,
-    'uri' => NULL,
+    'uri' => '',
     'uri_override' => 0,
     'hide_children_in_tree' => 0,
     'show_in_tree' => 1,
@@ -295,11 +291,7 @@
 <div class="container">
     <section>
         <h1>IT WORKS!!!!</h1>
-        <p>You have successfully installed MODX Revolution&nbsp;2.6.1-pl!</p>
-<p>Now that MODX is installed you can login to the manager to create your templates, manage content and install third party extras to add functionality to your&nbsp;website. </p>
-
-<h2>New to&nbsp;MODX?</h2>
-
+        <p>hello, world</p>
     </section>
     <aside>
         <a href="/manager/" title="Your MODX manager" class="cta-button">Go to the&nbsp;manager</a>
@@ -403,11 +395,48 @@
   array (
     '[[*pagetitle]]' => 'Home',
     '[[*longtitle:default=`Home`]]' => 'IT WORKS!!!!',
+    '[[$hello]]' => '<p>hello, world</p>',
   ),
   'sourceCache' => 
   array (
     'modChunk' => 
     array (
+      'hello' => 
+      array (
+        'fields' => 
+        array (
+          'id' => 1,
+          'source' => 1,
+          'property_preprocess' => false,
+          'name' => 'hello',
+          'description' => '',
+          'editor_type' => 0,
+          'category' => 0,
+          'cache_type' => 0,
+          'snippet' => '<p>hello, world</p>',
+          'locked' => false,
+          'properties' => 
+          array (
+          ),
+          'static' => false,
+          'static_file' => '',
+          'content' => '<p>hello, world</p>',
+        ),
+        'policies' => 
+        array (
+        ),
+        'source' => 
+        array (
+          'id' => 1,
+          'name' => 'Filesystem',
+          'description' => '',
+          'class_key' => 'sources.modFileMediaSource',
+          'properties' => 
+          array (
+          ),
+          'is_stream' => true,
+        ),
+      ),
     ),
     'modSnippet' => 
     array (
