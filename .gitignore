@@ -1,10 +1,5 @@
-/node_modules
- 
-components
-/connectors
-/core
-/manager
-/setup
- 
-custom.log
-error.log
+.idea/
+config.core.php
+data/
+dev/
+/vendor/
