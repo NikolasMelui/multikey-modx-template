@@ -1,0 +1,4 @@
+key: manager_js_cache_file_locking
+value: '1'
+xtype: combo-boolean
+area: manager

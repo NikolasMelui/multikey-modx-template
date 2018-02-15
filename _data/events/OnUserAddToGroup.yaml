@@ -1,0 +1,3 @@
+name: OnUserAddToGroup
+service: 1
+groupname: 'User Groups'

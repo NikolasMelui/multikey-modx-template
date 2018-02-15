@@ -1,0 +1,4 @@
+key: feed_modx_news_enabled
+value: '1'
+xtype: combo-boolean
+area: system

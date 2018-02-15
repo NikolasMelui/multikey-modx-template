@@ -1,0 +1,4 @@
+key: cache_resource
+value: '1'
+xtype: combo-boolean
+area: caching

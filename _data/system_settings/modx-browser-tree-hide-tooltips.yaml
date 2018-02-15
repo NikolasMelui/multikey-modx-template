@@ -1,0 +1,4 @@
+key: modx_browser_tree_hide_tooltips
+value: '1'
+xtype: combo-boolean
+area: manager

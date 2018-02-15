@@ -1,0 +1,8 @@
+id: 4
+name: w_recentlyeditedresources
+description: w_recentlyeditedresources_desc
+type: file
+content: '[[++manager_path]]controllers/default/dashboard/widget.grid-rer.php'
+namespace: core
+name_trans: w_recentlyeditedresources
+description_trans: w_recentlyeditedresources_desc

@@ -1,0 +1,4 @@
+key: cache_lexicon_topics
+value: '1'
+xtype: combo-boolean
+area: caching

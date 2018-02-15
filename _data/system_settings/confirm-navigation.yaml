@@ -1,0 +1,4 @@
+key: confirm_navigation
+value: '1'
+xtype: combo-boolean
+area: manager

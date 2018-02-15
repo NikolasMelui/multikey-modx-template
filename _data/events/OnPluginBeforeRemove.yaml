@@ -1,0 +1,3 @@
+name: OnPluginBeforeRemove
+service: 1
+groupname: Plugins

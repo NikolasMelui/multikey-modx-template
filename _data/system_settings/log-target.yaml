@@ -1,0 +1,3 @@
+key: log_target
+value: FILE
+area: system

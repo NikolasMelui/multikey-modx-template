@@ -1,0 +1,4 @@
+key: manager_language
+value: ru
+xtype: modx-combo-language
+area: language

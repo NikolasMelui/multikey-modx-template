@@ -1,0 +1,4 @@
+key: use_alias_path
+value: '0'
+xtype: combo-boolean
+area: furls

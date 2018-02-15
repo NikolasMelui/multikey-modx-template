@@ -1,0 +1,3 @@
+key: mail_smtp_hosts
+value: localhost
+area: mail

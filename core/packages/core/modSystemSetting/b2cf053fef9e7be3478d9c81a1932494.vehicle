@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'ed26cc5891a0dcd7e5f9600226fdeae0',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'b2cf053fef9e7be3478d9c81a1932494',
+  'native_key' => 'failed_login_attempts',
+  'object' => '{"key":"failed_login_attempts","value":"5","xtype":"textfield","namespace":"core","area":"authentication","editedon":null}',
+);

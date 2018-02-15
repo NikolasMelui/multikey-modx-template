@@ -1,0 +1,4 @@
+key: default_content_type
+value: '1'
+xtype: modx-combo-content-type
+area: site

@@ -1,0 +1,4 @@
+key: cache_disabled
+value: '0'
+xtype: combo-boolean
+area: caching

@@ -1,0 +1,4 @@
+key: use_multibyte
+value: '1'
+xtype: combo-boolean
+area: language

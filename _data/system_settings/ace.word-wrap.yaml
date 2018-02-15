@@ -1,0 +1,4 @@
+key: ace.word_wrap
+xtype: combo-boolean
+namespace: ace
+area: general

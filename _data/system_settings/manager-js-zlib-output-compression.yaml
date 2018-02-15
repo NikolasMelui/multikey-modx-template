@@ -1,0 +1,4 @@
+key: manager_js_zlib_output_compression
+value: '0'
+xtype: combo-boolean
+area: manager

@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '28de1d421ac800ee99814857dea95138',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '0254f84a98af32bab56ffb49b80aa996',
+  'native_key' => 'date_timezone',
+  'object' => '{"key":"date_timezone","value":"","xtype":"textfield","namespace":"core","area":"system","editedon":null}',
+);

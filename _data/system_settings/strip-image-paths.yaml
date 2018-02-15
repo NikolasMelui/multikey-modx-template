@@ -1,0 +1,4 @@
+key: strip_image_paths
+value: '1'
+xtype: combo-boolean
+area: file

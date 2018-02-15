@@ -1,0 +1,4 @@
+key: preserve_menuindex
+value: '1'
+xtype: combo-boolean
+area: manager

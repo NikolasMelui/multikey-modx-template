@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'f88985907552e3dce8bf63dd19891511',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'e2e08d6ad54ecd2c6cbae94e71906569',
+  'native_key' => 'unauthorized_page',
+  'object' => '{"key":"unauthorized_page","value":"1","xtype":"textfield","namespace":"core","area":"site","editedon":null}',
+);

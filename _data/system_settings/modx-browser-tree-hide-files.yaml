@@ -1,0 +1,3 @@
+key: modx_browser_tree_hide_files
+xtype: combo-boolean
+area: manager

@@ -1,0 +1,3 @@
+key: compress_js_max_files
+value: '10'
+area: manager

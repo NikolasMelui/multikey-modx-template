@@ -1,0 +1,12 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => false,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '30de07f53a052723a53bf8486369ba04',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '38ed93e4b3e8e10e10571df954e8ea04',
+  'native_key' => 'proxy_password',
+  'object' => '{"key":"proxy_password","value":"","xtype":"text-password","namespace":"core","area":"proxy","editedon":null}',
+);

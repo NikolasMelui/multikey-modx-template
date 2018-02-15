@@ -1,0 +1,4 @@
+key: friendly_alias_lowercase_only
+value: '1'
+xtype: combo-boolean
+area: furls

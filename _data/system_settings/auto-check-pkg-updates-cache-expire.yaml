@@ -1,0 +1,3 @@
+key: auto_check_pkg_updates_cache_expire
+value: '15'
+area: system

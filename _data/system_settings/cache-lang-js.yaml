@@ -1,0 +1,4 @@
+key: cache_lang_js
+value: '1'
+xtype: combo-boolean
+area: caching

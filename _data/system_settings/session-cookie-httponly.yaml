@@ -1,0 +1,4 @@
+key: session_cookie_httponly
+value: '1'
+xtype: combo-boolean
+area: session

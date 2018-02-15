@@ -1,0 +1,4 @@
+key: show_tv_categories_header
+value: '1'
+xtype: combo-boolean
+area: manager
