@@ -1,13 +1,10 @@
-Modx Shop
+Multikey Modx Template
 ======
 
-Using gitify framework to install MODX REVO and make a shop on it.
+Multikey Modx Template made by NikolasMelui and Rinat Dav for Multikey Studio and everyone.
 
-## Quick Installation
+## How use it?
 
-```` shell
-$ git clone https://github.com/modmore/Gitify.git Gitify
-$ cd Gitify
-$ composer install
-$ chmod +x Gitify
+````
+...you need Gitify, guys...
 ````
