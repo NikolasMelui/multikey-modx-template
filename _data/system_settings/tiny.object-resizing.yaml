@@ -1,0 +1,5 @@
+key: tiny.object_resizing
+value: '1'
+xtype: combo-boolean
+namespace: tinymce
+area: general

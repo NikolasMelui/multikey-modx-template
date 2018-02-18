@@ -1,0 +1,4 @@
+key: tiny.font_size_style_values
+value: 'xx-small,x-small,small,medium,large,x-large,xx-large'
+namespace: tinymce
+area: cleanup-output

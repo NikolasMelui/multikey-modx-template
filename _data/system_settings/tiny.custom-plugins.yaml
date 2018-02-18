@@ -1,0 +1,4 @@
+key: tiny.custom_plugins
+value: 'style,advimage,advlink,modxlink,searchreplace,print,contextmenu,paste,fullscreen,noneditable,nonbreaking,xhtmlxtras,visualchars,media'
+namespace: tinymce
+area: general

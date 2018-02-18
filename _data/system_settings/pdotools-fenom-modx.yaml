@@ -1,0 +1,4 @@
+key: pdotools_fenom_modx
+xtype: combo-boolean
+namespace: pdotools
+area: pdotools_main

@@ -1,0 +1,4 @@
+key: pdofetch_class_path
+value: '{core_path}components/pdotools/model/'
+namespace: pdotools
+area: pdotools_main

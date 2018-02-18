@@ -1,3 +1,4 @@
 key: publish_default
+value: '1'
 xtype: combo-boolean
 area: site

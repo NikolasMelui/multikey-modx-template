@@ -1,4 +1,4 @@
 key: global_duplicate_uri_check
-value: '0'
+value: '1'
 xtype: combo-boolean
 area: furls

@@ -1,0 +1,4 @@
+key: phpthumbof.hash_thumbnail_names
+xtype: combo-boolean
+namespace: phpthumbof
+area: general

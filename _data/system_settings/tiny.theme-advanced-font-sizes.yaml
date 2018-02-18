@@ -1,0 +1,4 @@
+key: tiny.theme_advanced_font_sizes
+value: '80%,90%,100%,120%,140%,160%,180%,220%,260%,320%,400%,500%,700%'
+namespace: tinymce
+area: advanced-theme

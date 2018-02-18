@@ -1,0 +1,4 @@
+key: tiny.indentation
+value: 30px
+namespace: tinymce
+area: cleanup-output

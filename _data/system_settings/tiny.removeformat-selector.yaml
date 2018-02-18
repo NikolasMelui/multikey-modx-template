@@ -1,0 +1,4 @@
+key: tiny.removeformat_selector
+value: 'b,strong,em,i,span,ins'
+namespace: tinymce
+area: cleanup-output

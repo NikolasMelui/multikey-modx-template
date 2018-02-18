@@ -1,0 +1,4 @@
+key: phpthumbof.s3_headers_check
+xtype: combo-boolean
+namespace: phpthumbof
+area: s3

@@ -1,0 +1,4 @@
+key: tiny.nowrap
+xtype: combo-boolean
+namespace: tinymce
+area: general

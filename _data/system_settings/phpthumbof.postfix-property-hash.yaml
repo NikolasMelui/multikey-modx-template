@@ -1,0 +1,5 @@
+key: phpthumbof.postfix_property_hash
+value: '1'
+xtype: combo-boolean
+namespace: phpthumbof
+area: general

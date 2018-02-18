@@ -1,0 +1,4 @@
+key: tiny.custom_buttons1
+value: 'undo,redo,selectall,separator,pastetext,pasteword,separator,search,replace,separator,nonbreaking,hr,charmap,separator,image,modxlink,unlink,anchor,media,separator,cleanup,removeformat,separator,fullscreen,print,code,help'
+namespace: tinymce
+area: custom-buttons

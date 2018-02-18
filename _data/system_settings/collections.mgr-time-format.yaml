@@ -1,0 +1,4 @@
+key: collections.mgr_time_format
+value: 'g:i a'
+namespace: collections
+area: manager

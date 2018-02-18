@@ -1,0 +1,4 @@
+key: tiny.template_list_snippet
+xtype: textarea
+namespace: tinymce
+area: general

@@ -1,0 +1,4 @@
+key: tiny.remove_linebreaks
+xtype: combo-boolean
+namespace: tinymce
+area: cleanup-output

@@ -1,3 +1,4 @@
 key: which_editor
+value: TinyMCE
 xtype: modx-combo-rte
 area: editor

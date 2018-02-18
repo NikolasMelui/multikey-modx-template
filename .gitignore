@@ -1,3 +1,18 @@
-/node_modules
+# ignore MODX files
+/assets/*
+/connectors/*
+/core/*
+/manager/*
+/setup/*
+/config.core.php
+/index.php
+/.htaccess
+
+# ignore node modules
+/node_modules/
+
+# ignore Gitify folder (system Gitify files)
 /Gitify
+
+# ignore static site files (static means on CURRENT site)
 /_data/*/*GI.*

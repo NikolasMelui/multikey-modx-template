@@ -1,0 +1,4 @@
+key: tiny.fix_nesting
+xtype: combo-boolean
+namespace: tinymce
+area: cleanup-output

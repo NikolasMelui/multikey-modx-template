@@ -1,0 +1,4 @@
+key: pdotools_elements_path
+value: '{core_path}elements/'
+namespace: pdotools
+area: pdotools_main

@@ -1,0 +1,4 @@
+key: tiny.custom_buttons2
+value: 'bold,italic,underline,strikethrough,sub,sup,separator,bullist,numlist,outdent,indent,separator,justifyleft,justifycenter,justifyright,justifyfull,separator,styleselect,formatselect,separator,styleprops'
+namespace: tinymce
+area: custom-buttons

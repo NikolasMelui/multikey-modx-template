@@ -1,4 +1,5 @@
 key: ace.word_wrap
+value: '0'
 xtype: combo-boolean
 namespace: ace
 area: general

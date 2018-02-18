@@ -1,0 +1,4 @@
+key: tiny.theme_advanced_blockformats
+value: 'p,h1,h2,h3,h4,h5,h6,div,blockquote,code,pre,address'
+namespace: tinymce
+area: advanced-theme

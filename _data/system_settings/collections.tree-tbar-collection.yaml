@@ -1,0 +1,5 @@
+key: collections.tree_tbar_collection
+value: '0'
+xtype: combo-boolean
+namespace: collections
+area: manager

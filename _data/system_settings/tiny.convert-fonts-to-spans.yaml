@@ -1,0 +1,5 @@
+key: tiny.convert_fonts_to_spans
+value: '1'
+xtype: combo-boolean
+namespace: tinymce
+area: cleanup-output
