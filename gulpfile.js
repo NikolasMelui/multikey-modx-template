@@ -28,9 +28,7 @@ lazyRequireTask('js', './gulptasks/js.gulptask.js', {
   ]
 });
 
-lazyRequireTask('server', './gulptasks/server.gulptask.js', {
-  src: 'assets'
-});
+lazyRequireTask('server', './gulptasks/server.gulptask.js');
 
 gulp.task('watch', () => {
   gulp.watch('./assets/sass/**/*.sass', gulp.series('sass'));
@@ -39,5 +37,4 @@ gulp.task('watch', () => {
 });
 
 gulp.task(
-  'default',
-  gulp.series('sass', 'commonjs', 'js'), gulp.parallel('server', 'watch'));
+  'default', gulp.series(gulp.series('sass', 'commonjs', 'js'), gulp.parallel('server', 'watch'))); 
