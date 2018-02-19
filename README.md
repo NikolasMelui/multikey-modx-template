@@ -83,15 +83,15 @@ Apache
 
 
 **From developers 2 developers.**
-[NikolasMelui][https://github.com/NikolasMelui]
-[RinatDav][https://github.com/RinatDav]
+[NikolasMelui][nikolasmelui]
+[RinatDav][rinatdav]
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
-   [nikolasmelui]:[]
-   [rinatdav]:[]
-   [gitify]:[http://modmore.github.io/Gitify/]
-   [apache]: [https://httpd.apache.org/download.cgi]
-   [nginx]: [https://nginx.ru/ru/download.html]
-   [php]: [http://php.net/downloads.php]
-   [mysql]:[https://www.mysql.com/downloads/]
+   [nikolasmelui]: <https://github.com/NikolasMelui>
+   [rinatdav]: <https://github.com/RinatDav>
+   [gitify]: <http://modmore.github.io/Gitify/>
+   [apache]: <https://httpd.apache.org/download.cgi>
+   [nginx]: <https://nginx.ru/ru/download.html>
+   [php]: <http://php.net/downloads.php>
+   [mysql]: <https://www.mysql.com/downloads/>
    [nodejs]: <http://nodejs.org>
