@@ -9,6 +9,6 @@ module.exports = options => {
     });
     gulp.watch('assets/**/*.{sass,css,js}').on('change', function() {
     browserSync.reload();
-});
+  });
   };
 };
