@@ -40,8 +40,4 @@ gulp.task('watch', () => {
 
 gulp.task(
   'default',
-  gulp.series(
-    gulp.parallel('sass', gulp.series('commonjs', 'js')),
-    gulp.parallel('server', 'watch')
-  )
-);
+  gulp.series('sass', 'commonjs', 'js'), gulp.parallel('server', 'watch'));

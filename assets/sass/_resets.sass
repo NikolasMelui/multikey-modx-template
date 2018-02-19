@@ -1,0 +1,72 @@
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+*::-webkit-input-placeholder
+	color: lighten(#000, 40%)
+	opacity: 1
+*:-moz-placeholder
+	color: lighten(#000, 40%)
+	opacity: 1
+*::-moz-placeholder
+	color: lighten(#000, 40%)
+	opacity: 1
+*:-ms-input-placeholder
+	color: lighten(#000, 40%)
+	opacity: 1
+*::selection
+  color: $l
+  background: $d
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: $d
+body input:required:valid,
+body textarea:required:valid
+	color: $d
+.hidden
+	display: none
+html, body
+	height: 100%
+	width: 100%
+	margin: 0
+	overflow: hidden
+html, body::-webkit-scrollbar-track
+	box-shadow: inset 0 0 6px lighten($l, 80%)
+html, body::-webkit-scrollbar
+	width: 4px
+html, body::-webkit-scrollbar-thumb
+	background-color: $l
+body
+	font-size: 20px
+	min-width: 320px
+	position: relative
+	line-height: 1.5
+	font-family: $default-font
+	opacity: 1
+	color: $l
+h1,h2,h3,h4,h5,h6,ul,menu,li
+	margin: 0
+	padding: 0
+input, textarea, a, button, select
+	outline: none
+a
+	text-decoration: none
+ul
+  padding: 0
+  margin: 0
+li
+	list-style-type: none
+	padding: 0
+  margin: 0
+p
+	margin: 0 0 20px 0
+	padding: 0
+select
+  appearance: none
+address
+  font-style: normal

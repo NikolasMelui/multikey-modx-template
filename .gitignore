@@ -1,5 +1,5 @@
 # ignore MODX files
-/assets/*
+/assets/components/*
 /connectors/*
 /core/*
 /manager/*
@@ -10,9 +10,9 @@
 
 # ignore node modules
 /node_modules/
-
-# ignore Gitify folder (system Gitify files)
+system
+# ignore Gitify folder (Gitify system files)
 /Gitify
 
-# ignore static site files (static means on CURRENT site)
+# ignore Gitify files for current site (dynamic peaces)
 /_data/*/*GI.*

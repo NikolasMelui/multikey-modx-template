@@ -1,0 +1,29 @@
+.btn-l
+	@include btn ($l, $d, $l, $l, transparent, 0, 20px, 10px 20px, 1)
+.btn-d
+	@include btn ($l, $l, $d, $d, $l, 0, 20px, 10px 20px, 1)
+input, textarea, select
+	@include btn ($l, $l, transparent, $l, transparent, 0, 20px, 10px 20px, 1)
+	text-align: left
+.link
+	@include link ($l, 1px, 0)
+.select
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		width: 10px
+		height: 10px
+		border:
+			top: 1px solid $l
+			left: 1px solid $l
+		top: 13px
+		right: 20px
+		z-index: 10
+		transform: rotate(45deg + 180deg)
+		cursor: pointer
+		pointer-events: none
+	select
+		width: 100%
+	option
+		background-color: $d

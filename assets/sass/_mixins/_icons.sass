@@ -1,0 +1,278 @@
+@mixin center-mode
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+
+@mixin triangle-top ($size, $color)
+	height: 0
+	width: 0
+	border: $size solid transparent
+	border-bottom: $size solid $color
+	transform-origin: 50% 30%
+	cursor: pointer
+
+@mixin triangle-left ($size, $color)
+	height: 0
+	width: 0
+	border: $size solid transparent
+	border-right: $size solid $color
+	transform-origin: 70% 50%
+	cursor: pointer
+
+@mixin triangle-bottom ($size, $color)
+	height: 0
+	width: 0
+	border: $size solid transparent
+	border-top: $size solid $color
+	transform-origin: 50% 70%
+	cursor: pointer
+
+@mixin triangle-right ($size, $color)
+	height: 0
+	width: 0
+	border: $size solid transparent
+	border-left: $size solid $color
+	transform-origin: 30% 50%
+	cursor: pointer
+
+@mixin triangle-top-right ($size, $color)
+	height: 0
+	width: 0
+	cursor: pointer
+	border: $size solid transparent
+	border:
+		top: $size solid $color
+		right: $size solid $color
+
+@mixin triangle-top-left ($size, $color)
+	height: 0
+	width: 0
+	cursor: pointer
+	border: $size solid transparent
+	border:
+		top: $size solid $color
+		left: $size solid $color
+
+@mixin triangle-bottom-right ($size, $color)
+	height: 0
+	width: 0
+	cursor: pointer
+	border: $size solid transparent
+	border:
+		bottom: $size solid $color
+		right: $size solid $color
+
+@mixin triangle-bottom-left ($size, $color)
+	height: 0
+	width: 0
+	cursor: pointer
+	border: $size solid transparent
+	border:
+		bottom: $size solid $color
+		right: $size solid $color
+
+@mixin close-icon ($size, $color, $t)
+	width: $size
+	height: $size
+	position: relative
+	transition: 0.5s
+	cursor: pointer
+	&::after, &::before
+		content: ''
+		position: absolute
+		width: $size
+		height: $t
+		background-color: $color
+		@include center-mode
+	&::after
+		transform: rotate(45deg)
+	&::before
+		transform: rotate(-45deg)
+.close
+	@include close-icon (40px, $l, 5px)
+
+@mixin angle-top ($size, $color, $t)
+	height: $size
+	width: $size
+	cursor: pointer
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		@include center-mode
+		height: $size
+		width: $size
+		border:
+			top: $t solid $color
+			left: $t solid $color
+		transform: rotate(45deg)
+
+@mixin angle-top ($size, $color, $t)
+	height: $size
+	width: $size
+	cursor: pointer
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		@include center-mode
+		height: $size
+		width: $size
+		border:
+			top: $t solid $color
+			left: $t solid $color
+		transform: rotate(45deg)
+
+@mixin angle-left ($size, $color, $t)
+	height: $size
+	width: $size
+	cursor: pointer
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		@include center-mode
+		height: $size
+		width: $size
+		border:
+			bottom: $t solid $color
+			left: $t solid $color
+		transform: rotate(45deg)
+
+@mixin angle-bottom ($size, $color, $t)
+	height: $size
+	width: $size
+	cursor: pointer
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		@include center-mode
+		height: $size
+		width: $size
+		border:
+			bottom: $t solid $color
+			right: $t solid $color
+		transform: rotate(45deg)
+
+@mixin angle-right ($size, $color, $t)
+	height: $size
+	width: $size
+	cursor: pointer
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		@include center-mode
+		height: $size
+		width: $size
+		border:
+			top: $t solid $color
+			right: $t solid $color
+		transform: rotate(45deg)
+
+@mixin arrow-back ($size, $color, $t)
+	width: $size
+	height: $size
+	position: relative
+	transition: 0.5s
+	cursor: pointer
+	&::after, &::before
+		content: ''
+		position: absolute
+		margin: auto
+	&::after
+		height: $t
+		width: $size
+		background-color: $color
+		@include center-mode
+	&::before
+		width: $size / 2
+		height: $size / 2
+		border:
+			bottom: $t solid $l
+			left: $t solid $l
+		transform: rotate(45deg)
+		top: 0
+		bottom: 0
+		left: 0
+
+@mixin arrow-next ($size, $color, $t)
+	width: $size
+	height: $size
+	position: relative
+	transition: 0.5s
+	cursor: pointer
+	&::after, &::before
+		content: ''
+		position: absolute
+		margin: auto
+	&::after
+		height: $t
+		width: $size
+		background-color: $color
+		@include center-mode
+	&::before
+		width: $size / 2
+		height: $size / 2
+		border:
+			top: $t solid $l
+			right: $t solid $l
+		transform: rotate(45deg)
+		top: 0
+		bottom: 0
+		right: 0
+
+@mixin arrow-up ($size, $color, $t)
+	width: $size
+	height: $size
+	position: relative
+	transition: 0.5s
+	cursor: pointer
+	&::after, &::before
+		content: ''
+		position: absolute
+		margin: auto
+	&::after
+		width: $t
+		height: $size
+		background-color: $color
+		@include center-mode
+	&::before
+		width: $size / 2
+		height: $size / 2
+		border:
+			top: $t solid $l
+			left: $t solid $l
+		transform: rotate(45deg)
+		top: 0
+		left: 0
+		right: 0
+
+@mixin arrow-down ($size, $color, $t)
+	width: $size
+	height: $size
+	position: relative
+	transition: 0.5s
+	cursor: pointer
+	&::after, &::before
+		content: ''
+		position: absolute
+		margin: auto
+	&::after
+		width: $t
+		height: $size
+		background-color: $color
+		@include center-mode
+	&::before
+		width: $size / 2
+		height: $size / 2
+		border:
+			bottom: $t solid $l
+			right: $t solid $l
+		transform: rotate(45deg)
+		bottom: 0
+		left: 0
+		right: 0

@@ -1,0 +1,115 @@
+.top-mnu
+	position: fixed
+	display: flex
+	justify-content: space-around
+	width: 100%
+	z-index: 200
+
+.mob-mnu
+	position: fixed
+	width: 80%
+	padding: 15px 0 15px 15px
+	height: 100%
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	z-index: 0
+	background-color: $l
+	.screen-link
+		padding: 10px 0
+		font-size: 20px
+		transition: 0.5s
+	a
+		color: $d
+		transition: 0.5s
+
+.blocker
+	position: fixed
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	background-color: rgba($d, 0.5)
+	z-index: -100
+	opacity: 0
+	transition: 0.5s
+	cursor: pointer
+
+.to-top
+	position: fixed
+	bottom: 10px
+	right: 20px
+	z-index: 9999
+	opacity: 1
+	transition: 0.5s
+
+.progress
+	position: fixed
+	top: 0
+	left: 0
+	width: 0
+	background-color: $l
+	height: 2px
+	z-index: 300
+	transition: 1s ease-in-out
+
+.hamburger
+	cursor: pointer
+	position: fixed
+	top: 10px
+	left: 20px
+	z-index: 300
+	transition: 0.5s
+	width: 20px
+	height: 10px
+	transition: 0.5s
+	&::after,&::before
+		content: ''
+		position: absolute
+		height: 1px
+		width: 20px
+		background-color: $l
+		transition: 0.5s
+	&::before
+		top: 0
+	&::after
+		top: 10px
+.inner-hamb
+	position: absolute
+	width: 20px
+	height: 1px
+	top: 5px
+	background-color: $l
+	transition: 0.5s
+	
+#politics
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 9999
+	background-color: $l
+	transition: 0.5s
+	color: $d
+	opacity: 0
+	overflow-y: scroll
+	padding: 30px
+	ul
+		padding-left: 10px
+	li
+		padding-left: 10px
+#politics::-webkit-scrollbar-track
+	box-shadow: inset 0 0 6px lighten($d, 80%)
+#politics::-webkit-scrollbar
+	width: 4px
+#politics::-webkit-scrollbar-thumb
+	background-color: $d
+.close-politics
+	@include close-icon (25px, $d, 3px)
+	top: 10px
+	right: 10px
+	cursor: pointer
+	position: absolute
+	&:hover
+		transform: scale(1.2)

@@ -1,8 +1,10 @@
-const $ = require('gulp-load-plugins')({
+const $ = require('gulp-load-plugins')(
+  {
   rename: {
     'gulp-clean-css': 'cleancss'
   }
-});
+}
+);
 
 const gulp = require('gulp'),
   combiner = require('stream-combiner2').obj;
@@ -26,8 +28,8 @@ module.exports = options => {
         isDevelopment,
         combiner($.sourcemaps.write(), $.debug({ title: 'Write SASS sourcemaps:' }))
       ),
-      gulp.dest('./assets/css'),
+      gulp.dest('assets/css'),
       $.debug({ title: 'Wtite CSS to dest:' })
-    ).on('error', $.notify.onError());
+    ).on('error', error => console.log(error));
   };
 };
