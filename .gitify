@@ -107,6 +107,12 @@ data:
             - dashboard
             - widget
 packages:
-    modx.com:
-        service_url: 'https://rest.modx.com/extras/'
-        description: 'The official MODX transport provider for 3rd party components.'
+        modx.com:
+            service_url: http://rest.modx.com/extras/
+            packages:
+                - Ace
+                - Collections
+                - FormIt
+                - pdoTools
+                - phpThumbOf
+                - TinyMCE
