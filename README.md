@@ -57,7 +57,7 @@ $ npm i
 $ npm run dev
 ```
 
-You can use this command to create a production minified files:
+... and this command  is needed to create a minified frontend files:
 ```
 $ npm run prod
 ```
@@ -79,8 +79,7 @@ This is an opensource project. All contributions are welcome. Make a fork and go
 
 License
 ----
-Apache
-
+MIT License
 
 **From developers 2 developers.**
 [NikolasMelui][nikolasmelui]
