@@ -70,6 +70,7 @@ This is an opensource project. All contributions are welcome. Make a fork and go
 | Todos | Status |
 | ------ | ------ |
 | es6 | - |
+| Patterns | - |
 | Webpack | - |
 | ESLint | - |
 | Mocha | - |
