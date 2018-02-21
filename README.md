@@ -13,7 +13,6 @@ You also need:
   - [Node.js][nodejs] v7+ and NPM
 
 You can think this is useless template with old technologies and MODX is bad and dead. Ok.
-__
 
 > Go and fu** yourself. J. Stat.
 
@@ -75,6 +74,7 @@ This is an opensource project. All contributions are welcome. Make a fork and go
 | ESLint | - |
 | Mocha | - |
 | CI\CD | - |
+| SFTP\rsync | - |
 | Docker | - |
 | Kubernates | - |
 
