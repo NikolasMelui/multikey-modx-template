@@ -38,7 +38,7 @@ $ git clone https://github.com/NikolasMelui/multikey-modx-template.git
 Install the latest MODX and all packages:
 ```
 $ Gitify modx:install
-$ Gitify packages:install --all
+$ Gitify package:install --all
 ```
 
 Now build the project installation:
