@@ -66,7 +66,7 @@ $ npm i
 $ npm run dev
 ```
 
-... and this command  is needed to create a minified frontend files:
+... and this command if needed to create a minified frontend files:
 ```
 $ npm run prod
 ```
