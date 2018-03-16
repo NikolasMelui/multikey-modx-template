@@ -19,7 +19,7 @@ You can think this is useless template with old technologies and MODX is bad and
 You need a MySQL database for new MODX Revo project:
 ```
 $ mysql -u root -p
-mysql> CREATE DATABASE **db_name**;
+mysql> CREATE DATABASE __db_name__;
 mysql> GRANT ALL PRIVILEGES ON **db_name**.* TO **user_name**@localhost IDENTIFIED BY '**user_password**';
 ```
 
