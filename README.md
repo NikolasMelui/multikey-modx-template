@@ -17,10 +17,13 @@ You can think this is useless template with old technologies and MODX is bad and
 > Go and fu** yourself. J. Stat.
 
 You need a MySQL database for new MODX Revo project:
+__db_name__ - your db name;
+__user_name__ - your user name;
+__user_password__ - your user password;
 ```
 $ mysql -u root -p
-mysql> CREATE DATABASE __db_name__;
-mysql> GRANT ALL PRIVILEGES ON **db_name**.* TO **user_name**@localhost IDENTIFIED BY '**user_password**';
+mysql> CREATE DATABASE db_name;
+mysql> GRANT ALL PRIVILEGES ON db_name.* TO **user_name**@localhost IDENTIFIED BY 'user_password';
 ```
 
 ## Installation
