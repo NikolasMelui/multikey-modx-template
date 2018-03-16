@@ -46,7 +46,10 @@ Now build the project installation:
 $ Gitify build --force
 ```
 
-You can ```chmod 777``` on all files you need if you have problems with permissions after build the project.
+After that use this sh script to add necessary rules for files and folders:
+```
+$ sh rules.sh
+```
 
 ### Quick Start
 
