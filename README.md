@@ -17,6 +17,7 @@ You can think this is useless template with old technologies and MODX is bad and
 > Go and fu** yourself. J. Stat.
 
 You need a MySQL database for new MODX Revo project:
+**where**...
 __db_name__ - your db name;
 __user_name__ - your user name;
 __user_password__ - your user password;
