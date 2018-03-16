@@ -16,6 +16,13 @@ You can think this is useless template with old technologies and MODX is bad and
 
 > Go and fu** yourself. J. Stat.
 
+You need a MySQL database for new MODX Revo project:
+```
+$ mysql -u root -p
+mysql> CREATE DATABASE db_name;
+mysql> GRANT ALL PRIVILEGES ON db_name.* TO user_name@localhost IDENTIFIED BY 'user_password';
+```
+
 ## Installation
 
 First install [Gitify][gitify]:
@@ -26,16 +33,11 @@ $ composer install
 $ chmod +x Gitify
 ```
 
-If there is no unzip command installed in your system:
-```
-$ sudo apt-get install unzip
-```
-
 Clone the template to your local mashine:
 ```
 $ git clone https://github.com/NikolasMelui/multikey-modx-template.git
 ```
-Install the latest MODX and all packages:
+Install the latest MODX Revo version and all packages:
 ```
 $ Gitify modx:install
 $ Gitify package:install --all
@@ -46,10 +48,12 @@ Now build the project installation:
 $ Gitify build --force
 ```
 
-After that use this sh script to add necessary rules for files and folders:
+Use this sh script to add necessary rules for files and folders:
 ```
 $ sh rules.sh
 ```
+
+And now you have a complete template.
 
 ### Quick Start
 
