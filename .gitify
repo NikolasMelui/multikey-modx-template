@@ -112,7 +112,11 @@ packages:
             packages:
                 - Ace
                 - Collections
-                - FormIt
                 - pdoTools
                 - phpThumbOf
                 - TinyMCE
+                - modDevTools
+                - SEO Pro
+                - tagElementPlugin
+                - translit
+                
