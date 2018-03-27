@@ -112,11 +112,11 @@ packages:
             packages:
                 - Ace
                 - Collections
-                - pdoTools
-                - phpThumbOf
-                - TinyMCE
+                - MIGX
                 - modDevTools
+                - pdoTools
+                - phpThumbOn
                 - SEO Pro
                 - tagElementPlugin
+                - TinyMCE
                 - translit
-                
