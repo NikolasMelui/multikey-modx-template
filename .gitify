@@ -112,6 +112,7 @@ packages:
             packages:
                 - Ace
                 - Collections
+                - dbAdmin
                 - MIGX
                 - modDevTools
                 - pdoTools
