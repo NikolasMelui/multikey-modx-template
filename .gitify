@@ -111,8 +111,10 @@ packages:
             service_url: http://rest.modx.com/extras/
             packages:
                 - Ace
-                - Collections
+                - BackupMODX
                 - dbAdmin
+                - debugParser
+                - frontendManager
                 - MIGX
                 - modDevTools
                 - pdoTools
