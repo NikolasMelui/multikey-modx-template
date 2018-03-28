@@ -112,6 +112,7 @@ packages:
             packages:
                 - Ace
                 - BackupMODX
+                - CacheClear
                 - dbAdmin
                 - debugParser
                 - frontendManager
