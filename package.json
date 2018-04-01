@@ -1,6 +1,6 @@
 {
   "name": "multikey-modx-template",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "Multikey Modx Template",
   "main": "gulpfile.js",
   "scripts": {
