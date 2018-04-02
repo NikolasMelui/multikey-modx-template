@@ -1,6 +1,6 @@
 chown -R root:www-data core/cache
 chown -R root:www-data core/config
-chown -R root:www-data core/compononts
+chown -R root:www-data core/components
 chown -R root:www-data core/export
 chown -R root:www-data core/packages
 chown -R root:www-data assets
