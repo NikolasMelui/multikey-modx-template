@@ -1,5 +1,0 @@
-key: collections.tree_tbar_selection
-value: '0'
-xtype: combo-boolean
-namespace: collections
-area: manager
