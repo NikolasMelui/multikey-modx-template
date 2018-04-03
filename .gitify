@@ -50,6 +50,22 @@ data:
         primary:
             - pluginid
             - event
+    migx_formtab:
+        class: migxFormtab
+        primary: id
+        package: migx
+    migx_formtab_field:
+        class: migxFormtabField
+        primary: id
+    migx_config_element:
+        class: migxConfigElement
+        primary: id
+    migx_element:
+        class: migxElement
+        primary: id
+    migx_config:
+        class: migxConfig
+        primary: id
     events:
         class: modEvent
         primary: name
