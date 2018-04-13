@@ -6,15 +6,11 @@
 @import "_mixins/btns"
 @import "_mixins/links"
 @import "_mixins/icons"
+@import "_mixins/dynamic-grid"
 @import "resets"
 @import "btn_forms_elem"
 @import "titles"
 @import "fixed"
-
-.cont
-	display: flex
-	width: 100%
-	justify-content: space-around
 
 //Slider default style
 .item
@@ -165,7 +161,7 @@
 	@include angle-left (30px, $l, 2px)
 .angle-right
 	@include angle-right (30px, $l, 2px)
-	
+
 .arrow-back
 	@include arrow-back (40px, $l, 2px)
 .arrow-next

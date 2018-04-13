@@ -22,8 +22,11 @@ lazyRequireTask('commonjs', './gulptasks/commonjs.gulptask.js', {
 lazyRequireTask('js', './gulptasks/js.gulptask.js', {
   src: [
     './assets/libs/jquery/dist/jquery.min.js',
-    './assets/libs/inputmask/dist/min/inputmask/inputmask.min.js',
-    './assets/libs/inputmask/dist/min/inputmask/jquery.inputmask.min.js',
+    './assets/libs/jquery.maskedinput/dist/jquery.maskedinput.min.js',
+    './assets/libs/fullpage/fullpage.js',
+    './assets/libs/mobile-menu/mobile-menu.js',
+    './assets/libs/slider/slider.js',
+    './assets/libs/popup/popup.js',
     './assets/js/common.min.js' // Always required last
   ]
 });
@@ -37,4 +40,4 @@ gulp.task('watch', () => {
 });
 
 gulp.task(
-  'default', gulp.series(gulp.series('sass', 'commonjs', 'js'), gulp.parallel('server', 'watch'))); 
+  'default', gulp.series(gulp.series('sass', 'commonjs', 'js'), gulp.parallel('server', 'watch')));

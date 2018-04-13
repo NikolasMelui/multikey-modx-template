@@ -1,7 +1,6 @@
 id: 23
 name: unCasher
 description: 'Uncash function for css, js and other static modified files.'
-category: Главная
 properties: null
 
 -----

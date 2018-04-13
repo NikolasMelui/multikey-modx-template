@@ -1,25 +1,22 @@
+@import "vars"
 .hidden
 	display: none
 .visible-xs
 	display: none
-@import "vars"
+.cont-fluid
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: flex-start
+	flex-wrap: wrap
+	width: 1920px
+	margin: 0 auto
+	padding: 0 20px
+.row
+	display: flex
+	flex-wrap: wrap
+	width: 100%
 
-@media only screen and (max-width : 1200px)
-	//
-
-@media only screen and (max-width : 992px)
-	//
-
-@media only screen and (max-width : 768px)
-	.hidden-xs
-		display: none
+@media only screen and (max-width: 768px)
 	.visible-xs
 		display: block
-	.visible-flex-xs
-		display: flex
-
-@media only screen and (max-width : 480px)
-	//
-
-@media only screen and (max-width : 320px)
-	//

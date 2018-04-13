@@ -1,0 +1,4 @@
+key: phpthumbon.images_dir
+value: images
+namespace: phpthumbon
+area: paths

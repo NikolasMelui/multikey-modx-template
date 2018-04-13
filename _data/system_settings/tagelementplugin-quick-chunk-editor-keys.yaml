@@ -1,0 +1,4 @@
+key: tagelementplugin_quick_chunk_editor_keys
+value: '{key: Ext.EventObject.C, ctrl: true, shift: false, alt: true}'
+namespace: tagelementplugin
+area: tagelementplugin_main

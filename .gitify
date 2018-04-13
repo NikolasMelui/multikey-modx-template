@@ -127,16 +127,16 @@ packages:
             service_url: http://rest.modx.com/extras/
             packages:
                 - Ace
-		- CacheClear
-		- Collections
-		- dbAdmin
-		- debugParser
-		- frontendManager
+                - CacheClear
+                - Collections
+                - dbAdmin
+                - debugParser
+                - frontendManager
                 - MIGX
                 - modDevTools
                 - pdoTools
                 - phpThumbOn
-		- SEO Pro
+                - SEO Pro
                 - tagElementPlugin
                 - TinyMCE
                 - translit

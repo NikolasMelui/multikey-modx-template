@@ -28,18 +28,17 @@ body textarea:focus:required:invalid
 body input:required:valid,
 body textarea:required:valid
 	color: $d
-.hidden
-	display: none
+
 html, body
 	height: 100%
 	width: 100%
 	margin: 0
 	overflow: hidden
-html, body::-webkit-scrollbar-track
+html::-webkit-scrollbar-track, body::-webkit-scrollbar-track
 	box-shadow: inset 0 0 6px lighten($l, 80%)
-html, body::-webkit-scrollbar
+html::-webkit-scrollbar, body::-webkit-scrollbar
 	width: 4px
-html, body::-webkit-scrollbar-thumb
+html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb
 	background-color: $l
 body
 	font-size: 20px
