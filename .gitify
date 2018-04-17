@@ -50,22 +50,6 @@ data:
         primary:
             - pluginid
             - event
-    migx_formtab:
-        class: migxFormtab
-        primary: id
-        package: migx
-    migx_formtab_field:
-        class: migxFormtabField
-        primary: id
-    migx_config_element:
-        class: migxConfigElement
-        primary: id
-    migx_element:
-        class: migxElement
-        primary: id
-    migx_config:
-        class: migxConfig
-        primary: id
     events:
         class: modEvent
         primary: name
@@ -123,20 +107,16 @@ data:
             - dashboard
             - widget
 packages:
-        modx.com:
-            service_url: http://rest.modx.com/extras/
-            packages:
-                - Ace
-                - CacheClear
-                - Collections
-                - dbAdmin
-                - debugParser
-                - frontendManager
-                - MIGX
-                - modDevTools
-                - pdoTools
-                - phpThumbOn
-                - SEO Pro
-                - tagElementPlugin
-                - TinyMCE
-                - translit
+    modx.com:
+        service_url: 'https://rest.modx.com/extras/'
+        description: 'The official MODX transport provider for 3rd party components.'
+        packages:
+            - ace-1.6.5-pl
+            - migx-2.12.0-pl
+            - moddevtools-1.0.0-pl
+            - pdotools-2.11.0-pl
+            - phpthumbon-1.3.1-pl
+            - seopro-1.3.0-pl
+            - tagelementplugin-1.2.4-pl1
+            - tinymce-4.3.4-pl
+            - translit-1.0.0-beta
