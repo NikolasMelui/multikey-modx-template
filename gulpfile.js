@@ -1,6 +1,6 @@
 'use strict';
 
-const gulp = require('gulp');
+const gulp = require('gulp4');
 
 const lazyRequireTask = (taskName, path, options) => {
 	options = options || {};

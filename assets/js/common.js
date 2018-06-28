@@ -12,7 +12,7 @@ $('.screen-scroll').scroll(function() {
 		toolbar.removeClass('white-theme');
 	}
 });
-
+// Show underline 'active link' in main menu
 var linkActivator = new linkActivator({
 	scrollContainer: '#scroll-container',
 	link: '.link',
@@ -20,7 +20,7 @@ var linkActivator = new linkActivator({
 });
 
 linkActivator.init();
-//Mobile menu
+// Mobile menu
 var mob_menu = new mmenu({
 	menu: '.mob-mnu',
 	blocker: '.blocker',
@@ -29,7 +29,7 @@ var mob_menu = new mmenu({
 });
 mob_menu.init();
 
-//Popup
+// Popup
 var popup = new spop({
 	popup: '.open-popup',
 	close_btn: '.close-popup, .blocker',
@@ -41,7 +41,7 @@ var popup = new spop({
 });
 popup.init();
 
-//Slider
+// Slider
 var space_slide = new sslider({
 	slider: '.slider',
 	row: 1,
