@@ -14,6 +14,7 @@
 	"author": "NikolasMelui & Rinat Dav",
 	"license": "ISC",
 	"devDependencies": {
+		"gulp4": "^4.0.3",
 		"browser-sync": "^2.24.5",
 		"gulp-autoprefixer": "^5.0.0",
 		"gulp-cache": "^1.0.2",
@@ -27,13 +28,9 @@
 		"gulp-sass": "^4.0.1",
 		"gulp-sourcemaps": "^2.6.4",
 		"gulp-uglify": "^3.0.0",
-		"gulp4": "^4.0.3",
 		"stream-combiner2": "^1.1.1"
 	},
 	"peerDependencies": {
 		"gulp": ">=4"
-	},
-	"dependencies": {
-		"hoek": "^5.0.3"
 	}
 }
