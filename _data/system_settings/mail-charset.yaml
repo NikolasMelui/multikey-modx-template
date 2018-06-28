@@ -2,3 +2,4 @@ key: mail_charset
 value: UTF-8
 xtype: modx-combo-charset
 area: mail
+editedon: null

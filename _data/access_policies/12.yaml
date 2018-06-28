@@ -1,0 +1,5 @@
+id: 12
+name: 'Hidden Namespace'
+description: 'Hidden Namespace policy, will not show Namespace in lists.'
+template: 7
+data: '{"load":false,"list":false,"view":true}'

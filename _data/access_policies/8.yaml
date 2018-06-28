@@ -1,0 +1,5 @@
+id: 8
+name: 'Media Source Admin'
+description: 'Media Source administration policy.'
+template: 5
+data: '{"create":true,"copy":true,"load":true,"list":true,"save":true,"remove":true,"view":true}'

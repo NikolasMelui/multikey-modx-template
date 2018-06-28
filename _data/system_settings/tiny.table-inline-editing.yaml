@@ -2,3 +2,4 @@ key: tiny.table_inline_editing
 xtype: combo-boolean
 namespace: tinymce
 area: general
+editedon: null

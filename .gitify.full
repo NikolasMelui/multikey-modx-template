@@ -1,0 +1,224 @@
+data_directory: _data/
+backup_directory: _backup/
+data:
+    access_actiondom:
+        class: modAccessActionDom
+        primary: id
+    access_actions:
+        class: modAccessAction
+        primary: id
+    access_category:
+        class: modAccessCategory
+        primary: id
+    access_context:
+        class: modAccessContext
+        primary: id
+    access_elements:
+        class: modAccessElement
+        primary: id
+    access_media_source:
+        class: modAccessMediaSource
+        primary: id
+    access_menus:
+        class: modAccessMenu
+        primary: id
+    access_namespace:
+        class: modAccessNamespace
+        primary: id
+    access_permissions:
+        class: modAccessPermission
+        primary: id
+    access_policies:
+        class: modAccessPolicy
+        primary: id
+    access_policy_templates:
+        class: modAccessPolicyTemplate
+        primary: id
+    access_policy_template_groups:
+        class: modAccessPolicyTemplateGroup
+        primary: id
+    access_resources:
+        class: modAccessResource
+        primary: id
+    access_resource_groups:
+        class: modAccessResourceGroup
+        primary: id
+    access_templatevars:
+        class: modAccessTemplateVar
+        primary: id
+    categories:
+        class: modCategory
+        primary: category
+        truncate_on_force:
+            - modCategoryClosure
+    context:
+        class: modContext
+        primary: key
+    context_resource:
+        class: modContextResource
+        primary:
+            - context_key
+            - resource
+    context_setting:
+        class: modContextSetting
+        primary:
+            - context_key
+            - key
+    content:
+        type: content
+        exclude_keys:
+            - editedby
+            - editedon
+        truncate_on_force:
+            - modTemplateVarResource
+    template_variables:
+        class: modTemplateVar
+        primary: name
+    template_variables_access:
+        class: modTemplateVarTemplate
+        primary:
+            - tmplvarid
+            - templateid
+    templates:
+        class: modTemplate
+        primary: templatename
+        extension: .html
+    chunks:
+        class: modChunk
+        primary: name
+        extension: .html
+    snippets:
+        class: modSnippet
+        primary: name
+        extension: .php
+    plugins:
+        class: modPlugin
+        primary: name
+        extension: .php
+    plugin_events:
+        class: modPluginEvent
+        primary:
+            - pluginid
+            - event
+    events:
+        class: modEvent
+        primary: name
+    namespaces:
+        class: modNamespace
+        primary: name
+    system_settings:
+        class: modSystemSetting
+        primary: key
+        exclude_keys:
+            - editedon
+    extension_packages:
+        class: modExtensionPackage
+        primary: namespace
+        exclude_keys:
+            - created_at
+            - updated_at
+    fc_sets:
+        class: modFormCustomizationSet
+        primary: id
+    fc_profiles:
+        class: modFormCustomizationProfile
+        primary: id
+    fc_profile_usergroups:
+        class: modFormCustomizationProfileUserGroup
+        primary:
+            - usergroup
+            - profile
+    fc_action_dom:
+        class: modActionDom
+        primary:
+            - set
+            - name
+    media_sources:
+        class: modMediaSource
+        primary: id
+    media_sources_contexts:
+        class: modMediaSourceContext
+        primary:
+            - source
+            - context_key
+    media_sources_elements:
+        class: modMediaSourceElement
+        primary:
+            - source
+            - object_class
+            - object
+            - context_key
+    dashboards:
+        class: modDashboard
+        primary:
+            - id
+            - name
+    dashboard_widgets:
+        class: modDashboardWidget
+        primary: id
+    dashboard_widget_placement:
+        class: modDashboardWidgetPlacement
+        primary:
+            - dashboard
+            - widget
+    membergroup_names:
+        class: modUserGroup
+        primary: id
+    member_groups:
+        class: modUserGroupMember
+        primary: id
+    migx_formtabs:
+        class: migxFormtab
+        primary: id
+        package: migx
+    migx_formtab_fields:
+        class: migxFormtabField
+        primary: id
+    migx_config_elements:
+        class: migxConfigElement
+        primary: id
+    migx_elements:
+        class: migxElement
+        primary: id
+    migx_configs:
+        class: migxConfig
+        primary: id
+    users:
+        class: modUser
+        primary: id
+    user_attributes:
+        class: modUserProfile
+        primary: id
+    user_group_roles:
+        class: modUserGroupRole
+        primary: id
+    user_group_settings:
+        class: modUserGroupSetting
+        primary:
+            - group
+            - key
+    user_messages:
+        class: modUserMessage
+        primary: id
+    user_settings:
+        class: modUserSetting
+        primary:
+            - id
+            - key
+    workspaces:
+        class: modWorkspace
+        primary: id
+packages:
+    modx.com:
+        service_url: 'https://rest.modx.com/extras/'
+        description: 'The official MODX transport provider for 3rd party components.'
+        packages:
+            - pdotools-2.11.2-pl
+            - phpthumbon-1.3.1-pl
+            - migx-2.12.0-pl
+            - dbadmin-1.1.3-pl
+            - tagelementplugin-1.2.4-pl1
+            - seopro-1.3.0-pl
+            - ace-1.6.5-pl
+            - tinymce-4.3.4-pl
+            - translit-1.0.0-beta

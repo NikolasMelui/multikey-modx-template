@@ -2,3 +2,4 @@ key: anonymous_sessions
 value: '1'
 xtype: combo-boolean
 area: session
+editedon: null
