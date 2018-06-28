@@ -1,0 +1,5 @@
+id: 6
+name: Element
+description: 'MODX Element policy with all attributes.'
+template: 4
+data: '{"add_children":true,"create":true,"delete":true,"list":true,"load":true,"remove":true,"save":true,"view":true,"copy":true}'

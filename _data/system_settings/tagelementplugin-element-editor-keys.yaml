@@ -2,3 +2,4 @@ key: tagelementplugin_element_editor_keys
 value: '{key: Ext.EventObject.ENTER, ctrl: true, shift: true, alt: false}'
 namespace: tagelementplugin
 area: tagelementplugin_main
+editedon: null

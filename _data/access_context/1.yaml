@@ -1,0 +1,4 @@
+id: 1
+target: web
+principal_class: modUserGroup
+policy: 3

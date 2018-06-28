@@ -1,3 +1,4 @@
 key: mail_smtp_single_to
 xtype: combo-boolean
 area: mail
+editedon: null

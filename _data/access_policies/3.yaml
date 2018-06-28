@@ -1,0 +1,5 @@
+id: 3
+name: 'Load Only'
+description: 'A minimal policy with permission to load an object.'
+template: 3
+data: '{"load":true}'
