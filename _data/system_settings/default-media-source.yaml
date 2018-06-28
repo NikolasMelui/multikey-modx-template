@@ -2,3 +2,4 @@ key: default_media_source
 value: '1'
 xtype: modx-combo-source
 area: manager
+editedon: null

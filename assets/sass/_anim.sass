@@ -1,17 +1,12 @@
-.active
-  z-index: 100
-  opacity: 1
-.active-prev
-.active-next
+.active-link
+  &::before, &::after
+    width: 50%
 
-.top-mnu
-  .active-link
-    a
-      color: blue
 .mob-mnu
   .active-link
-    a
-      color: red
+    .link
+      &::before, &::after
+        width: 50%
 
 .mob-mnu-active
   .page
@@ -30,17 +25,7 @@
 	.inner-hamb
 		opacity: 0
 		transform: translateX(100px)
-.appender-popup-wrap
-  .blocker
-    z-index: 999
-    opacity: 1
-  .popup-opened-open-callback
-    opacity: 1
 
-.popup-open-politics
-  #politics
-    opacity: 1
-
-.active-slide
-	.item
-		opacity: 1
+.notification-visible
+  transform: translate(0)
+  opacity: 1

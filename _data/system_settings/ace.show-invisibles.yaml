@@ -1,5 +1,6 @@
 key: ace.show_invisibles
-value: '0'
+value: '1'
 xtype: combo-boolean
 namespace: ace
 area: general
+editedon: '2018-06-28 08:15:10'

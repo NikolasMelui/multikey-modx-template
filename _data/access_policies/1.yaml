@@ -1,0 +1,5 @@
+id: 1
+name: Resource
+description: 'MODX Resource Policy with all attributes.'
+template: 2
+data: '{"add_children":true,"create":true,"copy":true,"delete":true,"list":true,"load":true,"move":true,"publish":true,"remove":true,"save":true,"steal_lock":true,"undelete":true,"unpublish":true,"view":true}'

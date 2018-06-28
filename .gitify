@@ -1,22 +1,39 @@
 data_directory: _data/
 backup_directory: _backup/
 data:
-    contexts:
+    access_context:
+        class: modAccessContext
+        primary: id
+    access_media_source:
+        class: sources.modAccessMediaSource
+        primary: id
+    access_policies:
+        class: modAccessPolicy
+        primary: id
+    access_resources:
+        class: modAccessResource
+        primary: id
+    access_resource_groups:
+        class: modAccessResourceGroup
+        primary: id
+    categories:
+        class: modCategory
+        primary: category
+        truncate_on_force:
+            - modCategoryClosure
+    context:
         class: modContext
         primary: key
-    context_settings:
+    context_resource:
+        class: modContextResource
+        primary:
+            - context_key
+            - resource
+    context_setting:
         class: modContextSetting
         primary:
             - context_key
             - key
-    template_variables:
-        class: modTemplateVar
-        primary: name
-    template_variables_access:
-        class: modTemplateVarTemplate
-        primary:
-            - tmplvarid
-            - templateid
     content:
         type: content
         exclude_keys:
@@ -24,59 +41,50 @@ data:
             - editedon
         truncate_on_force:
             - modTemplateVarResource
-    categories:
-        class: modCategory
-        primary: category
-        truncate_on_force:
-            - modCategoryClosure
-    templates:
+    site_templvars_access:
+        class: modTemplateVarResourceGroup
+        primary: id
+    site_templvars_contentvalues:
+        class: modTemplateVarResource
+        primary: id
+    site_templvars_templates:
+        class: modTemplateVarTemplate
+        primary:
+            - tmplvarid
+            - templateid
+    site_tmplvars:
+        class: modTemplateVar
+        primary: name
+    site_templates:
         class: modTemplate
         primary: templatename
         extension: .html
-    chunks:
+    site_htmlsnippets:
         class: modChunk
         primary: name
         extension: .html
-    snippets:
+    site_snippets:
         class: modSnippet
         primary: name
         extension: .php
-    plugins:
+    site_plugins:
         class: modPlugin
         primary: name
         extension: .php
-    plugin_events:
+    site_plugin_events:
         class: modPluginEvent
         primary:
             - pluginid
             - event
-    migx_formtab:
-        class: migxFormtab
-        primary: id
-        package: migx
-    migx_formtab_field:
-        class: migxFormtabField
-        primary: id
-    migx_config_element:
-        class: migxConfigElement
-        primary: id
-    migx_element:
-        class: migxElement
-        primary: id
-    migx_config:
-        class: migxConfig
-        primary: id
-    events:
+    system_eventnames:
         class: modEvent
-        primary: name
-    namespaces:
-        class: modNamespace
         primary: name
     system_settings:
         class: modSystemSetting
         primary: key
-        exclude_keys:
-            - editedon
+    namespaces:
+        class: modNamespace
+        primary: name
     extension_packages:
         class: modExtensionPackage
         primary: namespace
@@ -99,10 +107,21 @@ data:
         primary:
             - set
             - name
-    mediasources:
+    documentgroup_names:
+        class: modResourceGroup
+        primary: name
+    document_groups:
+        class: modResourceGroupResource
+        primary: id
+    media_sources:
         class: modMediaSource
         primary: id
-    mediasource_elements:
+    media_sources_contexts:
+        class: sources.modMediaSourceContext
+        primary:
+            - source
+            - context_key
+    media_sources_elements:
         class: sources.modMediaSourceElement
         primary:
             - source
@@ -122,21 +141,52 @@ data:
         primary:
             - dashboard
             - widget
+    membergroup_names:
+        class: modUserGroup
+        primary: id
+    member_groups:
+        class: modUserGroupMember
+        primary: id
+    migx_formtabs:
+        class: migxFormtab
+        primary: id
+        package: migx
+    migx_formtab_fields:
+        class: migxFormtabField
+        primary: id
+    migx_config_elements:
+        class: migxConfigElement
+        primary: id
+    migx_elements:
+        class: migxElement
+        primary: id
+    migx_configs:
+        class: migxConfig
+        primary: id
+    user_attributes:
+        class: modUserProfile
+        primary: id
+    user_group_roles:
+        class: modUserGroupRole
+        primary: id
+    users:
+        class: modUser
+        primary: id
+    workspaces:
+        class: modWorkspace
+        primary: id
 packages:
-        modx.com:
-            service_url: http://rest.modx.com/extras/
-            packages:
-                - Ace
-                - CacheClear
-                - Collections
-                - dbAdmin
-                - debugParser
-                - frontendManager
-                - MIGX
-                - modDevTools
-                - pdoTools
-                - phpThumbOn
-                - SEO Pro
-                - tagElementPlugin
-                - TinyMCE
-                - translit
+    modx.com:
+        service_url: 'https://rest.modx.com/extras/'
+        description: 'The official MODX transport provider for 3rd party components.'
+        packages:
+            - pdotools-2.11.2-pl
+            - phpthumbon-1.3.1-pl
+            - migx-2.12.0-pl
+            - dbadmin-1.1.3-pl
+            - tagelementplugin-1.2.4-pl1
+            - seopro-1.3.0-pl
+            - ace-1.6.5-pl
+            - tinymce-4.3.4-pl
+            - translit-1.0.0-beta
+

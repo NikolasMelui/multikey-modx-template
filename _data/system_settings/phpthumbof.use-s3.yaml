@@ -1,4 +1,0 @@
-key: phpthumbof.use_s3
-xtype: combo-boolean
-namespace: phpthumbof
-area: s3

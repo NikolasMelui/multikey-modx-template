@@ -1,0 +1,5 @@
+id: 11
+name: Context
+description: 'A standard Context policy that you can apply when creating Context ACLs for basic read/write and view_unpublished access within a Context.'
+template: 6
+data: '{"load":true,"list":true,"view":true,"save":true,"remove":true,"copy":true,"view_unpublished":true}'

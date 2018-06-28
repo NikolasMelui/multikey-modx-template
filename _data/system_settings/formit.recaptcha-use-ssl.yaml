@@ -1,5 +1,0 @@
-key: formit.recaptcha_use_ssl
-value: '0'
-xtype: combo-boolean
-namespace: formit
-area: recaptcha
