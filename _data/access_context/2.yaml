@@ -1,0 +1,6 @@
+id: 2
+target: mgr
+principal_class: modUserGroup
+principal: 1
+authority: 0
+policy: 2

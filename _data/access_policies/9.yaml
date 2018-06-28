@@ -1,0 +1,5 @@
+id: 9
+name: 'Media Source User'
+description: 'Media Source user policy, with basic viewing and using - but no editing - of Media Sources.'
+template: 5
+data: '{"load":true,"list":true,"view":true}'
