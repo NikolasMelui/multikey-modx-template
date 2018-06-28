@@ -1,6 +1,5 @@
-id: 23
+id: 32
 name: unCasher
-description: 'Uncash function for css, js and other static modified files.'
 properties: null
 
 -----

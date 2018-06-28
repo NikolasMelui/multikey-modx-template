@@ -1,4 +1,4 @@
-id: 17
+id: 4
 name: migxResizeOnUpload
 category: MIGX
 properties: 'a:0:{}'

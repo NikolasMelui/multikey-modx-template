@@ -1,4 +1,4 @@
-id: 60
+id: 27
 name: migxGetCollectionTree
 category: MIGX
 properties: ''

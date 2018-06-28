@@ -1,4 +1,4 @@
-id: 57
+id: 24
 name: exportMIGX2db
 category: MIGX
 properties: ''

@@ -1,29 +1,31 @@
 {
-  "name": "multikey-modx-template",
-  "version": "1.0.1",
-  "description": "Multikey Modx Template",
-  "main": "gulpfile.js",
-  "scripts": {
-    "dev": "NODE_ENV=development ./node_modules/.bin/gulp",
-    "prod": "NODE_ENV=production ./node_modules/.bin/gulp"
-  },
-  "author": "NikolasMelui & Rinat Dav",
-  "license": "ISC",
-  "devDependencies": {
-    "browser-sync": "^2.23.6",
-    "gulp": "gulpjs/gulp#4.0",
-    "gulp-autoprefixer": "^4.1.0",
-    "gulp-cache": "^1.0.2",
-    "gulp-clean-css": "^3.9.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-debug": "^3.2.0",
-    "gulp-if": "^2.0.2",
-    "gulp-load-plugins": "^1.5.0",
-    "gulp-notify": "^3.2.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.0",
-    "stream-combiner2": "^1.1.1"
-  }
+	"name": "multikey-modx-template",
+	"version": "2.0.0",
+	"description": "Multikey Modx Template",
+	"main": "gulpfile.js",
+	"scripts": {
+		"dev": "NODE_ENV=development ./node_modules/.bin/gulp",
+		"watch": "NODE_ENV=development ./node_modules/.bin/gulp watch",
+		"sass": "NODE_ENV=development ./node_modules/.bin/gulp sass",
+		"prod": "NODE_ENV=production ./node_modules/.bin/gulp"
+	},
+	"author": "NikolasMelui & Rinat Dav",
+	"license": "ISC",
+	"devDependencies": {
+		"browser-sync": "^2.23.6",
+		"gulp": "gulpjs/gulp#4.0",
+		"gulp-autoprefixer": "^4.1.0",
+		"gulp-cache": "^1.0.2",
+		"gulp-clean-css": "^3.9.2",
+		"gulp-concat": "^2.6.1",
+		"gulp-debug": "^3.2.0",
+		"gulp-if": "^2.0.2",
+		"gulp-load-plugins": "^1.5.0",
+		"gulp-notify": "^3.2.0",
+		"gulp-rename": "^1.2.2",
+		"gulp-sass": "^3.1.0",
+		"gulp-sourcemaps": "^2.6.4",
+		"gulp-uglify": "^3.0.0",
+		"stream-combiner2": "^1.1.1"
+	}
 }

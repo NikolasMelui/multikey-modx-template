@@ -1,4 +1,4 @@
-id: 48
+id: 15
 name: migxLoopCollection
 category: MIGX
 properties: ''

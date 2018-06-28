@@ -1,4 +1,4 @@
-id: 63
+id: 30
 name: migxHookAftercollectmigxitems
 category: MIGX
 properties: ''

@@ -1,4 +1,4 @@
-id: 59
+id: 26
 name: migxJsonToPlaceholders
 category: MIGX
 properties: ''

@@ -1,4 +1,4 @@
-id: 56
+id: 23
 name: migxObjectMediaPath
 category: MIGX
 properties: ''

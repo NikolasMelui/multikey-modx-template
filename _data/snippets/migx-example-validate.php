@@ -1,4 +1,4 @@
-id: 62
+id: 29
 name: migx_example_validate
 category: MIGX
 properties: ''

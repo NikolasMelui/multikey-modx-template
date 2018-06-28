@@ -111,12 +111,12 @@ packages:
         service_url: 'https://rest.modx.com/extras/'
         description: 'The official MODX transport provider for 3rd party components.'
         packages:
-            - ace-1.6.5-pl
-            - migx-2.12.0-pl
-            - moddevtools-1.0.0-pl
-            - pdotools-2.11.0-pl
+            - pdotools-2.11.2-pl
             - phpthumbon-1.3.1-pl
-            - seopro-1.3.0-pl
+            - migx-2.12.0-pl
+            - dbadmin-1.1.3-pl
             - tagelementplugin-1.2.4-pl1
+            - seopro-1.3.0-pl
+            - ace-1.6.5-pl
             - tinymce-4.3.4-pl
             - translit-1.0.0-beta

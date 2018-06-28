@@ -1,4 +1,4 @@
-id: 64
+id: 31
 name: migxAutoPublish
 category: MIGX
 properties: ''

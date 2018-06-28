@@ -1,4 +1,4 @@
-id: 46
+id: 13
 name: migxGetRelations
 category: MIGX
 properties: ''

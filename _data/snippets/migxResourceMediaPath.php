@@ -1,4 +1,4 @@
-id: 49
+id: 16
 name: migxResourceMediaPath
 category: MIGX
 properties: 'a:0:{}'

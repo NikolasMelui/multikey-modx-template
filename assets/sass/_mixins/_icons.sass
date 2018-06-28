@@ -90,8 +90,6 @@
 		transform: rotate(45deg)
 	&::before
 		transform: rotate(-45deg)
-.close
-	@include close-icon (40px, $l, 5px)
 
 @mixin angle-top ($size, $color, $t)
 	height: $size
@@ -192,8 +190,8 @@
 		width: $size / 2
 		height: $size / 2
 		border:
-			bottom: $t solid $l
-			left: $t solid $l
+			bottom: $t solid $color
+			left: $t solid $color
 		transform: rotate(45deg)
 		top: 0
 		bottom: 0
@@ -218,8 +216,8 @@
 		width: $size / 2
 		height: $size / 2
 		border:
-			top: $t solid $l
-			right: $t solid $l
+			top: $t solid $color
+			right: $t solid $color
 		transform: rotate(45deg)
 		top: 0
 		bottom: 0
@@ -244,8 +242,8 @@
 		width: $size / 2
 		height: $size / 2
 		border:
-			top: $t solid $l
-			left: $t solid $l
+			top: $t solid $color
+			left: $t solid $color
 		transform: rotate(45deg)
 		top: 0
 		left: 0
@@ -270,9 +268,48 @@
 		width: $size / 2
 		height: $size / 2
 		border:
-			bottom: $t solid $l
-			right: $t solid $l
+			bottom: $t solid $color
+			right: $t solid $color
 		transform: rotate(45deg)
 		bottom: 0
 		left: 0
 		right: 0
+
+//Icons example
+.triangle-top
+	@include triangle-top (20px, $d)
+.triangle-bottom
+	@include triangle-bottom (20px, $d)
+.triangle-left
+	@include triangle-left (20px, $d)
+.triangle-right
+	@include triangle-right (20px, $d)
+.triangle-top-right
+	@include triangle-top-right (15px, $d)
+.triangle-top-left
+	@include triangle-top-left (15px, $d)
+.triangle-bottom-right
+	@include triangle-bottom-right (15px, $d)
+.triangle-bottom-left
+	@include triangle-bottom-left (15px, $d)
+
+.angle-top
+	@include angle-top (30px, $d, 2px)
+.angle-bottom
+	@include angle-bottom (30px, $d, 2px)
+.angle-left
+	@include angle-left (30px, $d, 2px)
+.angle-right
+	@include angle-right (30px, $d, 2px)
+
+.arrow-back
+	@include arrow-back (40px, $d, 2px)
+.arrow-next
+	@include arrow-next (40px, $d, 2px)
+.arrow-up
+	@include arrow-up (40px, $d, 2px)
+.arrow-down
+	@include arrow-down (40px, $d, 2px)
+
+.close
+	@include close-icon (40px, $l, 5px)

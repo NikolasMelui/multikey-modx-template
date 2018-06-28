@@ -1,4 +1,4 @@
-id: 15
+id: 2
 name: MIGX
 category: MIGX
 properties: 'a:0:{}'

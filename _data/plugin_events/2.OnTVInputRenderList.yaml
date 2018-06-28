@@ -1,0 +1,3 @@
+pluginid: 2
+event: OnTVInputRenderList
+priority: 1

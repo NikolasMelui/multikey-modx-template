@@ -1,157 +1,156 @@
+// Progress
+var toolbar = $('.toolbar');
+$('.screen-scroll').scroll(function() {
+	var scrollTop = $(this)[0].scrollTop,
+		scrollHeight = $(this)[0].scrollHeight,
+		height = $(window).height(),
+		progress = (100 * scrollTop) / (scrollHeight - height);
+	$('.progress').css('width', progress + '%');
+	if (scrollTop > 100) {
+		toolbar.addClass('white-theme');
+	} else {
+		toolbar.removeClass('white-theme');
+	}
+});
+
+var linkActivator = new linkActivator({
+	scrollContainer: '#scroll-container',
+	link: '.link',
+	sect: '.sect',
+});
+
+linkActivator.init();
 //Mobile menu
 var mob_menu = new mmenu({
-  menu: '.mob-mnu',
-  blocker: '.blocker',
-  hamburger: '.hamburger',
-  page: '.page'
+	menu: '.mob-mnu',
+	blocker: '.blocker',
+	hamburger: '.hamburger',
+	page: '.page',
 });
 mob_menu.init();
-//Fullpage
-var space_page = new spage({
-  screen_scroll: '.screen-scroll',
-  sect: '.sect',
-  link: '.screen-link',
-  interval: 1300,
-  oversize: false,
-  afterChange: function(){},
-  beforeChange: function(){
-  	mob_menu.close();
-  }
+
+//Popup
+var popup = new spop({
+	popup: '.open-popup',
+	close_btn: '.close-popup, .blocker',
+	from: '.hidden',
+	to: 'body',
+	wrap: 'html',
+	when_open: function() {},
+	when_close: function() {},
 });
-space_page.init();
-//Popup politics
-var politics = new spop({
-	popup: '.open-politics',
-  close_btn: '.close-politics',
-  from: '.hidden',
-  to: '.page',
-  wrap: 'body',
-  when_open: function(){},
-  when_close: function(){}
-});
-politics.init();
-//Popup callback
-var callback = new spop({
-	popup: '.open-callback',
-  close_btn: '.close-callback, .blocker',
-  from: '.hidden',
-  to: '.page',
-  wrap: 'body',
-  when_open: function(){},
-  when_close: function(){}
-});
-callback.init();
+popup.init();
+
 //Slider
 var space_slide = new sslider({
-    slider: '.slider',
-    row: 1,
-    items: 1,
-    items_slide: 1,
-    res_w: true,
-    res_h: true,
-    arrow: '.control',
-    responsive: {
-      width:{
-        '300':{
-          loop: false,
-          automove: false,
-          row: 1,
-          items: 1,
-          items_slide: 1
-        },
-        '480':{
-          row: 1,
-          items: 2,
-          items_slide: 2
-        },
-        '768':{
-          row: 2,
-          items: 3,
-          items_slide: 3
-        },
-        '1200':{
-          loop: false,
-          automove: true,
-          row: 2,
-          items: 4,
-          items_slide: 2
-        }
-      },
-      height:{
-        '0':{
-          automove: false,
-          row: 1,
-          items: 1,
-          items_slide: 1,
-        },
-        '320':{
-          row: 2,
-          loop: true,
-          automove: true,
-          items: 2,
-          items_slide: 1
-        },
-        '560':{
-          automove: false,
-          loop: true,
-          row: 2,
-          items: 3,
-          items_slide: 2
-        },
-        '900':{
-          automove: false,
-          items: 4,
-          items_slide: 2
-        },
-      }
-    },
-    filter: true,
-    filter_wrap: '.filter',
-    chosen: '.filter-link',
-    viewport: '.viewport',
-    slide_line: '.slide-line',
-    item: '.item',
-    automove: false,
-    interval: 5000,
-    loop: false
-  });
+	slider: '.slider',
+	row: 1,
+	items: 1,
+	items_slide: 1,
+	res_w: true,
+	res_h: true,
+	arrow: '.control',
+	responsive: {
+		width: {
+			'300': {
+				loop: true,
+				row: 1,
+				items: 1,
+				items_slide: 1,
+			},
+			'768': {
+				loop: true,
+				row: 1,
+				items: 2,
+				items_slide: 1,
+			},
+			'1200': {
+				loop: true,
+				row: 1,
+				items: 3,
+				items_slide: 1,
+			},
+		},
+	},
+	filter: true,
+	filter_wrap: '.filter',
+	chosen: '.filter-link',
+	viewport: '.viewport',
+	slide_line: '.slide-line',
+	item: '.slide-item',
+	automove: false,
+	interval: 5000,
+	loop: false,
+});
 space_slide.init();
 
-('form').submit(function() {
-  var th = $(this);
-  var successMsg = th.find('#success')[0];
-  var errorMsg = th.find('#error')[0];
-  $.ajax({
-    url: 'mail',
-    type: 'GET',
-    data: th.serialize(),
-  })
-  .done(function(data) {
-    setTimeout(function() {
-      $(successMsg).addClass('active');
-      th.trigger('reset');
-    }, 1000);
-    console.log(data);
-    setTimeout(function() {
-      $(successMsg).removeClass('active');
-    }, 5000);
-  })
-  .fail(function() {
-    setTimeout(function() {
-      $(errorMsg).addClass('active');
-      th.trigger('reset');
-    }, 1000);
-    setTimeout(function() {
-      $(errorMsg).removeClass('active');
-    }, 5000);
-  });
-  return false;
+var successMsg = $('.message-success'),
+	errorMsg = $('.message-error');
+$('form').submit(function() {
+	var th = $(this);
+	$.ajax({
+		url: 'mail',
+		type: 'GET',
+		data: th.serialize(),
+	})
+		.done(function(data) {
+			setTimeout(function() {
+				successMsg.addClass('notification-visible');
+				th.trigger('reset');
+			}, 1000);
+			setTimeout(function() {
+				successMsg.removeClass('notification-visible');
+			}, 5000);
+		})
+		.fail(function() {
+			setTimeout(function() {
+				errorMsg.addClass('notification-visible');
+				th.trigger('reset');
+			}, 1000);
+			setTimeout(function() {
+				errorMsg.removeClass('notification-visible');
+			}, 5000);
+		});
+	return false;
 });
 
-$("#phone").mask("+7 (999) 999-99-99");
-$(window).on("load", function(){
-  var preloader = $('.preloader'),
-	    body = $('body');
+var offline = $('.offline'),
+	online = $('.online'),
+	notification = $('.notification');
+window.addEventListener(
+	'online',
+	function(e) {
+		$('.notification').removeClass('notification-visible');
+		online.addClass('notification-visible');
+		setTimeout(function() {
+			online.removeClass('notification-visible');
+		}, 5000);
+	},
+	false
+);
+window.addEventListener(
+	'offline',
+	function(e) {
+		$('.notification').removeClass('notification-visible');
+		offline.addClass('notification-visible');
+		setTimeout(function() {
+			offline.removeClass('notification-visible');
+		}, 5000);
+	},
+	false
+);
+
+$('.mask-phone').mask('+7 (999) 999-99-99');
+
+$('.sect').mousemove(function(e) {
+	var x = e.screenX / 40 + 50 + '%';
+	var y = e.screenY / 40 + '%';
+	$('.bg-overlay-d').css('background-position', x + ' ' + y);
+});
+
+$(window).on('load', function() {
+	var preloader = $('.preloader'),
+		body = $('body');
 	preloader.fadeOut();
 	body.addClass('ready');
 });

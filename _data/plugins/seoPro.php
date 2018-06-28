@@ -1,4 +1,4 @@
-id: 20
+id: 6
 name: seoPro
 description: 'SEO optimizing plugin for MODx Revolution.'
 category: seoPro

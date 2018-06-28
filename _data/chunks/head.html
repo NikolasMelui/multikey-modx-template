@@ -1,8 +1,7 @@
-id: 8
-source: 1
+id: 1
 name: head
 description: ''
-category: 'Общие элементы станиц'
+category: 'Общие элементы страницы'
 properties: 'a:0:{}'
 
 -----
@@ -11,18 +10,18 @@ properties: 'a:0:{}'
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>[[*longtitle]]</title>
   <base href="[[++site_url]]"/>
-  <link rel="icon" href="assets/images/favicons/favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="assets/images/favicons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="[[++favicon]]" type="image/x-icon">
+  <link rel="shortcut icon" href="[[++favicon]]" type="image/x-icon">
   <meta name="keywords" content="[[+seoPro.keywords]]"/>
   <meta name="description" content="[[*description]]"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-  <meta property="og:image" content="path/to/image.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:image" content="[[++og_image]]">
+       
   <!--<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">-->
   <!--<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">-->
   <!--<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">-->
-    
+  
   <!-- Chrome, Firefox OS and Opera -->
   <meta name="theme-color" content="#000">
   <!-- Windows Phone -->
@@ -38,4 +37,6 @@ properties: 'a:0:{}'
       background-color: #fff;
     }
   </style>
+  <meta name="yandex-verification" content="[[*verify_yandex]]" />
+  <meta name="google-site-verification" content="[[*verify_google]]" />
 </head>

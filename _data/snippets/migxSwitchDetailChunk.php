@@ -1,4 +1,4 @@
-id: 52
+id: 19
 name: migxSwitchDetailChunk
 category: MIGX
 properties: ''

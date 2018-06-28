@@ -1,0 +1,13 @@
+id: 2
+source: 1
+type: text
+name: verify_google
+caption: 'Верификатор Google.Webmaster'
+category: 'Общие элементы страницы'
+elements: ''
+display: default
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:5:{s:10:"allowBlank";s:4:"true";s:9:"minLength";s:0:"";s:9:"maxLength";s:0:"";s:5:"regex";s:0:"";s:9:"regexText";s:0:"";}'
+output_properties: 'a:0:{}'
+content: ''

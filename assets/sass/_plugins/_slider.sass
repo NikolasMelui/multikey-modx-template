@@ -1,0 +1,72 @@
+//Slider default style
+.slider
+	position: relative
+	cursor: pointer
+	z-index: 999
+.viewport
+	width: 100%
+	overflow: hidden
+.slide-line
+	transition: 0.5s
+.slide
+	float: left
+.slide-item
+	width: 100%
+	opacity: 0
+	transition: 1s
+	padding: 10px
+	background-color: lighten($a, 30%)
+.active-slide
+	.slide-item
+		opacity: 1
+.control
+	cursor: pointer
+	position: absolute
+	z-index: 300
+	transition: 0.5s
+	top: 0
+	&:hover
+		transform: scale(1.2)
+.prev
+	left: -50px
+.next
+	right: -50px
+
+.slider-dots
+	bottom: -30px
+	width: 100%
+	padding-top: 20px
+	left: 0
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	transition: 0.5s
+.dot
+	width: 6px
+	height: 6px
+	background-color: $d
+	margin: 0 20px 0 0
+	border-radius: 20px
+	cursor: pointer
+	transition: 0.2s
+	&:hover
+		width: 10px
+		height: 10px
+.dot-active
+	transform: scale(2)
+	justify-content: space-around
+	align-items: center
+
+.filter
+	display: flex
+	justify-content: space-around
+	align-items: center
+	width: 100%
+	padding-top: 30px
+.filter-link
+	color: $d
+	transition: 0.5s
+	&:hover
+		color: $a
+.filter-active
+	color: $a

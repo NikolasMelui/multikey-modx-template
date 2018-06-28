@@ -1,4 +1,4 @@
-id: 16
+id: 3
 name: MIGXquip
 category: MIGX
 properties: 'a:0:{}'

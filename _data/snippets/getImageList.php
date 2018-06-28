@@ -1,4 +1,4 @@
-id: 45
+id: 12
 name: getImageList
 category: MIGX
 properties: 'a:0:{}'

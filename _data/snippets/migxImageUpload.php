@@ -1,4 +1,4 @@
-id: 50
+id: 17
 name: migxImageUpload
 category: MIGX
 properties: ''
