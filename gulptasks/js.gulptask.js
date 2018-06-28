@@ -4,7 +4,7 @@ const $ = require('gulp-load-plugins')({
 	},
 });
 
-const gulp = require('gulp'),
+const gulp = require('gulp4'),
 	combiner = require('stream-combiner2').obj;
 
 const isDevelopment = process.env.NODE_ENV == 'development';
