@@ -1,5 +1,6 @@
 # DS mac file!
 **/*/.DS_Store
+.DS_Store
 
 # ignore MODX files
 /assets/components/*
