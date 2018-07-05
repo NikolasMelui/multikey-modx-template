@@ -28,6 +28,7 @@ lazyRequireTask('js', './gulptasks/js.gulptask.js', {
 		'./assets/libs/slider/index.js',
 		'./assets/libs/popup/index.js',
 		'./assets/libs/linkactivator/index.js',
+		'./assets/libs/animator/index.js',
 		'./assets/js/common.min.js', // Always required last
 	],
 });
