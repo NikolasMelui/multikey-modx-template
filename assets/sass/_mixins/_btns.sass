@@ -1,4 +1,4 @@
-@mixin btn ($border-color, $color, $bg-color, $hover-color, $bg-hover-color, $bg-active-color, $border-radius, $fz, $pad, $lh)
+@mixin btn ($border-color, $color, $bg-color, $hover-color, $bg-hover-color, $bg-active-color, $border-radius, $fz, $pad, $lh, $fw, $shadow)
   border: 1px solid $border-color
   border-radius: $border-radius
   color: $color
@@ -11,6 +11,8 @@
   line-height: $lh
   text-align: center
   display: inline-block
+  font-weight: $fw
+  position: relative
   &:hover, &:active, &:focus
     color: $hover-color
     background-color: $bg-hover-color

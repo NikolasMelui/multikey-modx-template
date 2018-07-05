@@ -12,15 +12,30 @@
 @import "_mixins/dynamic-grid"
 @import "_optional/flex"
 @import "base"
-@import "btn_forms_elem"
+@import "forms_elem"
 @import "titles"
 @import "fixed"
-@import "_plugins/slider"
-@import "_plugins/fullpage"
-@import "_plugins/popup"
+@import "libs"
+@import "buttons"
 
 #sect-1
 	height: 100%
+
+.box
+	width: 40px
+	height: 40px
+	background-color: red
+	transition: 0.5s
+	border-radius: $radius
+.number
+	width: auto
+	height: auto
+	color: $l
+	padding: $space
+	font-size: 26px
+	font-weight: 600
+.bgGreen
+	background-color: green
 
 @import "anim"
 @import "media"
