@@ -1,0 +1,12 @@
+RewriteEngine Off
+
+authname "... and who r u?"
+authtype basic
+authuserfile /your/path/.htpasswd
+require valid-user
+
+<files .htpasswd="">
+   deny from all
+</files>
+
+ErrorDocument 401 "401 Authorisation Required"
