@@ -183,6 +183,73 @@ data:
     migx_configs:
         class: migxConfig
         primary: id
+    ms2_category_options:
+        class: msCategoryOption
+        primary:
+            - option_id
+            - category_id
+    ms2_castomer_profiles:
+        class: msCustomerProfile
+        primary: referrerCode
+    ms2_deliveries:
+        class: msDelivery
+        primary: id
+    ms2_delivery_payments:
+        class: msDeliveryMember
+        primary:
+            - payment_id
+            - delivery_id
+    ms2_links:
+        class: msLink
+        primary: id
+    ms2_options:
+        class: msOption
+        primary: id
+    ms2_order_adresses:
+        class: msOrderAddress
+        primary: id
+    ms2_order_logs:
+        class: msOrderLog
+        primary: id
+    ms2_order_products:
+        class: msOrderProduct
+        primary: id
+    ms2_order_statuses:
+        class: msOrderStatus
+        primary: id
+    ms2_orders:
+        class: msOrder
+        primary: id
+    ms2_payments:
+        class: msPayment
+        primary: id
+    ms2_payments:
+        class: msPayment
+        primary: id
+    ms2_product_categories:
+        class: msCategoryMember
+        primary:
+            - product_id
+            - category_id
+    ms2_product_files:
+        class: msProductFile
+        primary: id
+    ms2_product_links:
+        class: msProductLink
+        primary:
+            - id
+            - master
+            - slave
+    ms2_product_options:
+        class: msProductOption
+        primary: product_id
+    ms2_products:
+        class: msProductData
+        primary: id
+    ms2_vendors:
+        class: msVendor
+        primary: id
+
     users:
         class: modUser
         primary: id
