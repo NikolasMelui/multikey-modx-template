@@ -1,0 +1,3 @@
+name: OnPluginEventBeforeRemove
+service: 1
+groupname: 'Plugin Events'

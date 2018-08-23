@@ -2,4 +2,3 @@ key: auto_check_pkg_updates
 value: '1'
 xtype: combo-boolean
 area: system
-editedon: null

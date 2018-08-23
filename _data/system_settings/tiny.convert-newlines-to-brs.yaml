@@ -2,4 +2,3 @@ key: tiny.convert_newlines_to_brs
 xtype: combo-boolean
 namespace: tinymce
 area: cleanup-output
-editedon: null

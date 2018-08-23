@@ -2,4 +2,3 @@ key: tvs_below_content
 value: '0'
 xtype: combo-boolean
 area: manager
-editedon: null

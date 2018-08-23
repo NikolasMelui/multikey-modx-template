@@ -2,4 +2,3 @@ key: tagelementplugin_chunk_editor_keys
 value: '{key: Ext.EventObject.C, ctrl: true, shift: true, alt: true}'
 namespace: tagelementplugin
 area: tagelementplugin_main
-editedon: null

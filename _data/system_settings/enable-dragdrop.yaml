@@ -2,4 +2,3 @@ key: enable_dragdrop
 value: '1'
 xtype: combo-boolean
 area: manager
-editedon: null

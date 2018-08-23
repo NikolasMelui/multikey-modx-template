@@ -2,4 +2,3 @@ key: which_editor
 value: TinyMCE
 xtype: modx-combo-rte
 area: editor
-editedon: '2018-06-27 16:22:21'

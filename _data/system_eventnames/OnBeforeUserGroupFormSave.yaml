@@ -1,0 +1,3 @@
+name: OnBeforeUserGroupFormSave
+service: 1
+groupname: 'User Groups'

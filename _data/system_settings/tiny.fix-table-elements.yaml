@@ -2,4 +2,3 @@ key: tiny.fix_table_elements
 xtype: combo-boolean
 namespace: tinymce
 area: cleanup-output
-editedon: null

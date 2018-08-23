@@ -1,0 +1,3 @@
+name: OnPackageUninstall
+service: 2
+groupname: 'Package Manager'

@@ -2,4 +2,3 @@ key: phpthumb_nohotlink_enabled
 value: '1'
 xtype: combo-boolean
 area: phpthumb
-editedon: null

@@ -1,0 +1,3 @@
+name: OnPackageRemove
+service: 2
+groupname: 'Package Manager'

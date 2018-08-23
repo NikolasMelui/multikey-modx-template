@@ -3,4 +3,3 @@ value: '1'
 xtype: combo-boolean
 namespace: tinymce
 area: cleanup-output
-editedon: null

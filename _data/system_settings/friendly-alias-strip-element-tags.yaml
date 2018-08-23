@@ -2,4 +2,3 @@ key: friendly_alias_strip_element_tags
 value: '1'
 xtype: combo-boolean
 area: furls
-editedon: null
