@@ -2,4 +2,3 @@ key: send_poweredby_header
 value: '0'
 xtype: combo-boolean
 area: system
-editedon: null

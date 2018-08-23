@@ -1,11 +1,35 @@
 // border-color, color, bg-color, hover-color, bg-hover-color, bg-active-color, border-radius, font-size, padding, line-heght, font-weight
-
+@import "_mixins/btns"
 .btn-a
-  @include btn ($a, $l, $a, $a, transparent, $l, $radius, 26px, 15px 45px, 1, 300, $shadow)
-  margin-bottom: $space
+	@include btn ($a, $l, $a, $a, $l, $l, $radius, 22px, $space / 2 $space, 1, 300, $shadow)
+	white-space: nowrap
 .btn-d
-  @include btn ($d, $l, $d, $d, $l, $l, $radius, 26px, 15px 45px, 1, 300, $shadow)
-  margin-bottom: $space
+	@include btn ($d, $l, $d, $d, $l, $l, $radius, 22px, $space / 2 $space, 1, 300, $shadow)
+	white-space: nowrap
 .btn-l
-  @include btn ($d, $d, $l, $l, $d, $d, $radius, 26px, 15px 45px, 1, 300, $shadow)
-  margin-bottom: $space
+	@include btn ($d, $d, $l, $l, $d, $d, $radius, 22px, $space / 2 $space, 1, 300, $shadow)
+	white-space: nowrap
+.btn-a-big
+	@include btn ($a, $l, $a, $a, $l, $l, $radius, 26px, $space $space * 3, 1, 300, $shadow)
+	white-space: nowrap
+.btn-d-big
+	@include btn ($d, $l, $d, $d, $l, $l, $radius, 26px, $space $space * 3, 1, 300, $shadow)
+	white-space: nowrap
+.btn-l-big
+	@include btn ($d, $d, $l, $l, $d, $d, $radius, 26px, $space $space * 3, 1, 300, $shadow)
+	white-space: nowrap
+
+@media only screen and (max-width : 1440px)
+	//
+@media only screen and (max-width : 1200px)
+	//
+@media only screen and (max-width : 992px)
+	//
+@media only screen and (max-width : 768px)
+	//
+@media only screen and (max-width : 560px)
+	//
+@media only screen and (max-width : 480px)
+	//
+@media only screen and (max-width : 320px)
+	//

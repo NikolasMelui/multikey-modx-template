@@ -1,0 +1,6 @@
+id: 3
+name: text
+description: 'plain text content'
+mime_type: text/plain
+file_extensions: .txt
+headers: null

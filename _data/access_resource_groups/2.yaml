@@ -1,6 +1,0 @@
-id: 2
-target: '1'
-principal_class: modUserGroup
-principal: 1
-policy: 1
-context_key: mgr

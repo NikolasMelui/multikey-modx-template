@@ -1,4 +1,4 @@
-const gulp = require('gulp4');
+const gulp = require('gulp');
 const browserSync = require('browser-sync');
 
 module.exports = options => {

@@ -2,4 +2,3 @@ key: allow_multiple_emails
 value: '1'
 xtype: combo-boolean
 area: authentication
-editedon: null

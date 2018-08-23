@@ -1,8 +1,7 @@
-# DS mac file!
-**/*/.DS_Store
+# DS_Store macOS files
 .DS_Store
 
-# ignore MODX files
+# MODX files
 /assets/components/*
 /connectors/*
 /core/*
@@ -10,13 +9,18 @@
 /setup/*
 /config.core.php
 /index.php
-/.htaccess
 
-# ignore node modules
+# Web server files
+.htaccess
+.htpasswd
+ht.access
+
+# Node_modules and some system files
 /node_modules/
 system
-# ignore Gitify folder (Gitify system files)
-/Gitify
 
-# ignore Gitify files for current site (dynamic peaces)
-/_data/*/*GI.*
+# Log files
+*.log
+
+# Backups
+_backup

@@ -1,54 +1,3 @@
-.toolbar
-	position: fixed
-	display: flex
-	justify-content: space-around
-	width: 100%
-	z-index: 200
-	height: 60px
-	top: 0
-	left: 0
-	.cont-fluid
-		align-items: center
-	.row
-		align-items: center
-	menu
-		width: 100%
-		display: flex
-		justify-content: space-between
-	.link
-		text-transform: none
-		margin-right: 0
-		color: $d
-		&::after, &::before
-			background-color: $a
-	img
-		width: 20px
-		position: absolute
-		@include center-mode
-		margin-left: 0
-
-.mob-mnu
-	position: fixed
-	width: 80%
-	padding: 15px 20px
-	height: 100%
-	display: flex
-	flex-direction: column
-	justify-content: flex-start
-	z-index: 0
-	background-color: $d
-	overflow-y: auto
-	.screen-link
-		padding: 20px 0
-		font-size: 20px
-		transition: 0.5s
-	.logo
-		padding: 0
-		img
-			width: 130px
-	form
-		margin: 30px 0 20px 0
-
 .blocker
 	position: fixed
 	width: 100%
@@ -61,121 +10,17 @@
 	transition: 0.5s
 	cursor: pointer
 
-.to-top
-	position: fixed
-	bottom: 10px
-	right: 20px
-	z-index: 991
-	opacity: 1
-	transition: 0.5s
-	.screen-link:hover + .to-top-text
-		opacity: 1
-
-.to-top-text
-	position: absolute
-	left: -80px
-	bottom: 0px
-	color: $a
-	opacity: 0
-	transition: 0.5s
-
-.progress
-	position: fixed
-	top: 0
-	left: 0
-	width: 0
-	background-color: $a
-	height: 2px
-	z-index: 1001
-
-.hamburger
-	cursor: pointer
-	width: 20px
-	height: 10px
-	margin: auto
-	margin-left: 0
-	transition: 0.5s
-	position: fixed
-	z-index: 300
-	&::after,&::before
-		content: ''
-		position: absolute
-		height: 1px
-		width: 20px
-		background-color: $a
-		transition: 0.5s
-	&::before
-		top: 0
-	&::after
-		top: 10px
-.inner-hamb
-	position: absolute
-	width: 20px
-	height: 1px
-	top: 5px
-	background-color: $a
-	transition: 0.5s
-
-.notification
-	position: fixed
-	top: 0
-	right: 0
-	max-width: 350px
-	width: 100%
-	z-index: 99999
-	background-color: $d
-	padding: 20px
-	border: $bord-a
-	transform: translateX(100%)
-	opacity: 0
-	transition: 0.5s
-	&:hover
-		opacity: 1
-		transform: translateX(0)
-
-#politics
-	top: 0
-	left: 0
-	width: 100%
-	height: 100%
-	background-color: $l
-	color: $d
-	overflow-y: scroll
-	padding: 30px
-	.close-popup
-		@include close-icon (25px, $d, 3px)
-		position: absolute
-	ul
-		padding-left: 10px
-	li
-		padding-left: 10px
-#politics::-webkit-scrollbar-track
-	box-shadow: inset 0 0 6px lighten($d, 80%)
-#politics::-webkit-scrollbar
-	width: 4px
-#politics::-webkit-scrollbar-thumb
-	background-color: $d
-
-#callback
-	width: 100%
-	max-width: 400px
-	height: 100%
-	max-height: 370px
-	background-color: $l
-	border: $bord-l
-	border-radius: $radius
-	form
-		display: flex
-		flex-direction: column
-		align-items: center
-		justify-content: center
-		position: relative
-		padding: 0 20px
-	.h4
-		text-align: center
-		margin-bottom: 20px
-		font-weight: 600
-	.btn-a
-		font-size: 20px
-		padding: 12px
-		width: 280px
+@media only screen and (max-width : 1440px)
+	//
+@media only screen and (max-width : 1200px)
+	//
+@media only screen and (max-width : 992px)
+	//
+@media only screen and (max-width : 768px)
+	//
+@media only screen and (max-width : 560px)
+	//
+@media only screen and (max-width : 480px)
+	//
+@media only screen and (max-width : 320px)
+	//

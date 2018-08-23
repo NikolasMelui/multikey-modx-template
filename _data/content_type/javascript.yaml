@@ -1,0 +1,6 @@
+id: 5
+name: javascript
+description: 'javascript content'
+mime_type: text/javascript
+file_extensions: .js
+headers: null

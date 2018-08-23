@@ -1,12 +1,31 @@
 // border-color, color, bg-color, hover-color, bg-hover-color, bg-active-color, border-radius, font-size, padding, line-heght, font-weight
-
+@import "_mixins/btns"
 input
-	@include btn ($light-grey, $d, $l, $d, $l, $l, $radius, 26px, 15px 25px, 1, 300, $shadow)
-	font-weight: 300
-label
-	color: $a
+	@include btn ($d, $d, $l, $d, $l, $l, $radius, 24px, $space $space / 2, 1, 300, $shadow)
+	width: 100%
+	text-align: left
 textarea
-	@include btn ($light-grey, $d, $l, $d, $l, $l, $radius, 26px, 15px 25px, 1, 300, $shadow)
-.link
-	@include link ($l, 1px, 0)
-	text-transform: uppercase
+	@include btn ($d, $d, $l, $d, $l, $l, $radius, 24px, $space $space / 2, 1, 300, $shadow)
+	height: 100%
+	width: 100%
+	text-align: left
+.textarea
+	width: 100%
+	height: 200px
+.form-group
+	padding: $space / 2 0
+	width: 100%
+@media only screen and (max-width : 1440px)
+	//
+@media only screen and (max-width : 1200px)
+	//
+@media only screen and (max-width : 992px)
+	//
+@media only screen and (max-width : 768px)
+	//
+@media only screen and (max-width : 560px)
+	//
+@media only screen and (max-width : 480px)
+	//
+@media only screen and (max-width : 320px)
+	//

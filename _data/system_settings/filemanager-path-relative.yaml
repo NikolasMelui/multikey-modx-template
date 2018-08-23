@@ -2,4 +2,3 @@ key: filemanager_path_relative
 value: '1'
 xtype: combo-boolean
 area: file
-editedon: null

@@ -1,7 +1,10 @@
 (function() {
 	function SpacePage(options) {
 		var _ = this;
-		_.screen_scroll = $(options.screen_scroll).length != 0 ? $(options.screen_scroll) : $('.screen-scroll');
+		_.screen_scroll =
+			$(options.screen_scroll).length != 0
+				? $(options.screen_scroll)
+				: $('.screen-scroll');
 		_.sect =
 			_.screen_scroll.find(options.sect).length != 0
 				? _.screen_scroll.find(options.sect)
@@ -87,7 +90,9 @@
 				var debounceTimer = 0,
 					debounce = true;
 				_.sect.on('wheel', function(e) {
-					e.originalEvent.deltaY > 0 ? (_.direction = 'down') : (_.direction = 'up');
+					e.originalEvent.deltaY > 0
+						? (_.direction = 'down')
+						: (_.direction = 'up');
 					_.ths_sect = $(this);
 					_.next_sect = $(this).next();
 					_.prev_sect = $(this).prev();
@@ -128,7 +133,9 @@
 					endY = e.originalEvent.changedTouches[0].screenY;
 					endX = e.originalEvent.changedTouches[0].screenX;
 					startY < endY ? (_.direction = 'up') : (_.direction = 'down');
-					startY - endY > 70 || startY - endY < -70 ? _.overflow() : (_.oversize = false);
+					startY - endY > 70 || startY - endY < -70
+						? _.overflow()
+						: (_.oversize = false);
 					if (
 						$(e.target)
 							.closest('.scrollable')
@@ -140,7 +147,9 @@
 					} else if (startX - endX > 100 || startX - endX < -100) {
 						return;
 					} else {
-						startY - endY > 70 || startY - endY < -70 ? (_.oversize = true) : (_.oversize = false);
+						startY - endY > 70 || startY - endY < -70
+							? (_.oversize = true)
+							: (_.oversize = false);
 						if (_.oversize) {
 							_.move(false, _.ths_sect);
 						}
@@ -150,7 +159,8 @@
 		};
 		_.move = function() {
 			if (
-				((_.direction == 'down' && _.index >= 0) || (_.direction == 'up' && _.index > 0)) &&
+				((_.direction == 'down' && _.index >= 0) ||
+					(_.direction == 'up' && _.index > 0)) &&
 				((_.direction == 'down' && _.index < _.sect.length - 1) ||
 					(_.direction == 'up' && _.index <= _.sect.length - 1))
 			) {
@@ -221,10 +231,15 @@
 			_.linkActive();
 		};
 		_.overflow = function() {
-			if (_.ths_sect.find('.scrollable').length != 0 && _.ths_sect != undefined) {
+			if (
+				_.ths_sect.find('.scrollable').length != 0 &&
+				_.ths_sect != undefined
+			) {
 				var scrollable = _.ths_sect.find('.scrollable');
 				_.direction == 'down'
-					? (_.oversize = scrollable.height() + scrollable.scrollTop() + 10 >= scrollable[0].scrollHeight)
+					? (_.oversize =
+							scrollable.height() + scrollable.scrollTop() + 10 >=
+							scrollable[0].scrollHeight)
 					: (_.oversize = scrollable.scrollTop() == 0);
 			} else {
 				_.oversize = true;

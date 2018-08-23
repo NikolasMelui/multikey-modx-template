@@ -1,42 +1,36 @@
-@import "../vars"
-
 @for $i from 1 through 1
-  .cont-fluid
-    width: nth($lg-cont-size, $i)
-  .lg-visible, .md-visible, .sm-visible, .xsm-visible, .xs-visible
-    display: none
-  .lg-flex-visible, .md-flex-visible, .sm-flex-visible, .xsm-flex-visible, .xs-flex-visible
-    display: none
-  @for $j from 1 through $grid-column
-    .#{nth($prefix, $i)}-col-offset-right-#{$j}
-      margin-right: (100 / $grid-column * $j) + %
-      margin-left: 0
-      width: 100 - (100 / $grid-column * $j) + %
-    .#{nth($prefix, $i)}-col-offset-#{$j}
-      margin-left: (100 / $grid-column * $j) + %
-      margin-right: 0
-      width: 100 - (100 / $grid-column * $j) + %
-    .#{nth($prefix, $i)}-col-#{$j}
-      width: (100 / $grid-column * $j) + %
+	.cont-fluid
+		width: nth($lg-cont-size, $i)
+	.lg-visible, .md-visible, .sm-visible, .xsm-visible, .xs-visible
+		display: none!important
+	@for $j from 1 through $grid-column
+		.#{nth($prefix, $i)}-offset-right-#{$j}
+			margin-right: (100 / $grid-column * $j) + %
+			margin-left: 0
+			width: 100 - (100 / $grid-column * $j) + %
+		.#{nth($prefix, $i)}-offset-#{$j}
+			margin-left: (100 / $grid-column * $j) + %
+			margin-right: 0
+			width: 100 - (100 / $grid-column * $j) + %
+		.#{nth($prefix, $i)}-#{$j}
+			width: (100 / $grid-column * $j) + %
 @for $i from 1 through length($prefix)
-  @if nth($brakepoint, $i)
-    @media only screen and (max-width: nth($brakepoint, $i))
-      .cont-fluid
-        width: nth($cont-sizes, $i)
-      .#{nth($prefix, $i)}-visible
-        display: block
-      .#{nth($prefix, $i)}-flex-visible
-        display: flex
-      .#{nth($prefix, $i)}-hidden
-        display: none
-      @for $j from 1 through $grid-column
-        .#{nth($prefix, $i)}-col-offset-#{$j}
-          margin-left: (100 / $grid-column * $j) + %
-          margin-right: 0
-          width: 100 - (100 / $grid-column * $j) + %
-        .#{nth($prefix, $i)}-col-offset-right-#{$j}
-          margin-right: (100 / $grid-column * $j) + %
-          margin-left: 0
-          width: 100 - (100 / $grid-column * $j) + %
-        .#{nth($prefix, $i)}-col-#{$j}
-          width: (100 / $grid-column * $j) + %
+	@if nth($brakepoint, $i)
+		@media only screen and (max-width: nth($brakepoint, $i))
+			.cont-fluid
+				width: nth($cont-sizes, $i)
+			.#{nth($prefix, $i)}-visible
+				display: block!important
+			.#{nth($prefix, $i)}-hidden
+				display: none!important
+			@for $j from 1 through $grid-column
+				.#{nth($prefix, $i)}-offset-#{$j}
+					margin-left: (100 / $grid-column * $j) + %
+					margin-right: 0
+					width: 100 - (100 / $grid-column * $j) + %
+				.#{nth($prefix, $i)}-offset-right-#{$j}
+					margin-right: (100 / $grid-column * $j) + %
+					margin-left: 0
+					width: 100 - (100 / $grid-column * $j) + %
+				.#{nth($prefix, $i)}-#{$j}
+					width: (100 / $grid-column * $j) + %
