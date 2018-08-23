@@ -12,7 +12,7 @@ const lazyRequireTask = (taskName, path, options) => {
 };
 
 lazyRequireTask('sass', './gulptasks/sass.gulptask.js', {
-	src: './assets/sass/main.sass',
+	src: './assets/sass/index.sass',
 });
 
 lazyRequireTask('commonjs', './gulptasks/commonjs.gulptask.js', {
