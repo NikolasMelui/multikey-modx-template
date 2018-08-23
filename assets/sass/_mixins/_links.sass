@@ -1,0 +1,19 @@
+@mixin link ($color, $height, $bottom)
+  position: relative
+  color: $color
+  transition: 0.5s
+  &::after, &::before
+    content: ''
+    transition: 0.3s
+    position: absolute
+    bottom: $bottom
+    background-color: $color
+    height: $height
+    width: 0
+  &::before
+    left: 0
+  &::after
+    right: 0
+  &:hover
+    &::before, &::after
+      width: 50%

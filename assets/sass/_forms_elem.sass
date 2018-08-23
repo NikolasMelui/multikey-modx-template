@@ -1,0 +1,34 @@
+// border-color, color, bg-color, hover-color, bg-hover-color, bg-active-color, border-radius, font-size, padding, line-heght, font-weight
+
+input
+	@include btn ($light-grey, $d, $l, $d, $l, $l, $radius, 26px, 15px 25px, 1, 300, $shadow)
+	font-weight: 300
+label
+	color: $a
+textarea, select
+	@include btn ($light-grey, $d, $l, $d, $l, $l, $radius, 26px, 15px 25px, 1, 300, $shadow)
+.link
+	@include link ($l, 1px, 0)
+	text-transform: uppercase
+.select
+	position: relative
+	&::after
+		content: ''
+		position: absolute
+		width: 10px
+		height: 10px
+		border:
+			top: $bord-d
+			left: $bord-d
+		top: 0
+		bottom: 0
+		margin: auto
+		right: 30px
+		z-index: 10
+		transform: rotate(45deg + 180deg)
+		cursor: pointer
+		pointer-events: none
+	select
+		width: 100%
+	option
+		background-color: $d
