@@ -45,13 +45,14 @@ Clone the template on your local mashine into created directory:
 ```
 $ git clone https://github.com/NikolasMelui/multikey-modx-template.git ./
 ```
-Install the latest MODX Revo version: and all packages:
+Install the latest MODX Revo version:
 ```
 $ Gitify modx:install
 ```
-
-And now install all necessary packages:
+Install packages:
+```
 $ Gitify package:install --all
+```
 Now build the project installation:
 ```
 $ Gitify build --force
