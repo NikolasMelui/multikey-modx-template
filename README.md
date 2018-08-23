@@ -1,5 +1,4 @@
 Multikey Modx Template
-======
 ##### [Russian][russian-docs]
 Multikey Modx Template powered by [NikolasMelui][nikolasmelui] and [RinatDav][rinatdav] for [multikey.studio][multikeystudio]
 
