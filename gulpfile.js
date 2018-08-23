@@ -1,6 +1,6 @@
 'use strict';
 
-const gulp = require('gulp4');
+const gulp = require('gulp');
 
 const lazyRequireTask = (taskName, path, options) => {
 	options = options || {};
@@ -36,9 +36,23 @@ lazyRequireTask('js', './gulptasks/js.gulptask.js', {
 lazyRequireTask('server', './gulptasks/server.gulptask.js');
 
 gulp.task('watch', () => {
-	gulp.watch('./assets/sass/**/*.sass', { usePolling: true }, gulp.series('sass'));
-	gulp.watch('./assets/js/common.js', { usePolling: true }, gulp.series('commonjs', 'js'));
+	gulp.watch(
+		'./assets/sass/**/*.sass',
+		{ usePolling: true },
+		gulp.series('sass')
+	);
+	gulp.watch(
+		'./assets/js/common.js',
+		{ usePolling: true },
+		gulp.series('commonjs', 'js')
+	);
 	gulp.watch('./assets/libs/**/*.js', { usePolling: true }, gulp.series('js'));
 });
 
-gulp.task('default', gulp.series(gulp.series('sass', 'commonjs', 'js'), gulp.parallel('server', 'watch')));
+gulp.task(
+	'default',
+	gulp.series(
+		gulp.series('sass', 'commonjs', 'js'),
+		gulp.parallel('server', 'watch')
+	)
+);
