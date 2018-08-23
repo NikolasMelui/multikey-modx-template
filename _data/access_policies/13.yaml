@@ -1,6 +1,0 @@
-id: 13
-name: dbAdministrator
-description: 'A policy for database administrator.'
-template: 8
-data: '{"tables_list":true,"table_view":true,"table_save":true,"table_truncate":true,"table_remove":true,"table_export":true,"sql_query_execute":true}'
-lexicon: 'dbadmin:permissions'
