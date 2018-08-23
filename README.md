@@ -1,6 +1,6 @@
 Multikey Modx Template
 ======
-Multikey Modx Template powered by [NikolasMelui][nikolasmelui] and [RinatDav][rinatdav] for Multikey Studio.
+Multikey Modx Template powered by [NikolasMelui][nikolasmelui] and [RinatDav][rinatdav] for [multikey.studio][multikeystudio].
 
 # Important!
 
@@ -16,7 +16,8 @@ You can think this is useless template with old technologies and MODX is bad and
 
 > Go and fu** yourself. J. Stat.
 
-You need a MySQL database for new MODX Revo project, where:
+If you need, you can create a new MySQL database for new MODX Revo project, but usually Gitify creates it automatically.
+If you want to do it yourself:
 * __db_name__ - your db name;
 * __user_name__ - your user name;
 * __user_password__ - your user password;
@@ -36,27 +37,32 @@ $ composer install
 $ chmod +x Gitify
 ```
 
-Clone the template to your local mashine:
+Create a directory for the new project and cd into it:
 ```
-$ git clone https://github.com/NikolasMelui/multikey-modx-template.git
+$ mkdir ${new_project} && cd ${new_project}
 ```
-Install the latest MODX Revo version and all packages:
+Clone the template on your local mashine into created directory:
+```
+$ git clone https://github.com/NikolasMelui/multikey-modx-template.git ./
+```
+Install the latest MODX Revo version: and all packages:
 ```
 $ Gitify modx:install
-$ Gitify package:install --all
 ```
 
+And now install all necessary packages:
+$ Gitify package:install --all
 Now build the project installation:
 ```
 $ Gitify build --force
 ```
 
-Use this sh script to add necessary rules for files and folders:
+Use this sh script (if you need) to add necessary rules for files and folders:
 ```
 $ sh rules.sh
 ```
 
-And now you have a complete template.
+And now you have a ready-made template.
 
 ### Quick Start
 
@@ -66,7 +72,7 @@ $ npm i
 $ npm run dev
 ```
 
-... and this command if needed to create a minified frontend files:
+... and this command (if you need) to create a minified frontend files:
 ```
 $ npm run prod
 ```
@@ -76,17 +82,17 @@ $ npm run prod
 Want to contribute? Great!
 This is an opensource project. All contributions are welcome. Make a fork and go on!
 
-| Todos | Status |
-| ------ | ------ |
-| es6 | - |
-| Patterns | - |
-| Webpack | - |
-| ESLint | - |
-| Mocha | - |
-| CI\CD | - |
-| SFTP\rsync | - |
-| Docker | https://github.com/NikolasMelui/docker-multikey-modx-template |
-| Kubernates | - |
+| Todos      | Status                                                        |
+| ---------- | ------------------------------------------------------------- |
+| es6        | -                                                             |
+| Patterns   | -                                                             |
+| Webpack    | -                                                             |
+| ESLint     | -                                                             |
+| Mocha      | -                                                             |
+| CI\CD      | -                                                             |
+| SFTP\rsync | -                                                             |
+| Docker     | https://github.com/NikolasMelui/docker-multikey-modx-template |
+| Kubernates | -                                                             |
 
 License
 ----
@@ -119,7 +125,8 @@ SOFTWARE.
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
    [nikolasmelui]: <https://github.com/NikolasMelui>
    [rinatdav]: <https://github.com/RinatDav>
-   [gitify]: <http://modmore.github.io/Gitify/>
+   [multikeystudio]: <https://multikey.studio>
+   [gitify]: <http://modmore.github.io/Gitify>
    [apache]: <https://httpd.apache.org/download.cgi>
    [nginx]: <https://nginx.ru/ru/download.html>
    [php]: <http://php.net/downloads.php>
