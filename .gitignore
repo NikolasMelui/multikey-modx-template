@@ -13,7 +13,11 @@
 # Web server files
 .htaccess
 .htpasswd
+ht.access
 
 # Node_modules and some system files
 /node_modules/
 system
+
+# Backups
+_backup
