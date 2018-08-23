@@ -1,0 +1,55 @@
+@mixin hamburger($width, $height, $color, $t)
+	cursor: pointer
+	width: $width
+	height: $height
+	transition: 0.5s
+	position: fixed
+	top: 20px
+	right: 10px
+	&::after,&::before
+		content: ''
+		position: absolute
+		height: $t
+		width: 100%
+		background-color: $a
+		transition: 0.5s
+	&::before
+		top: 0
+	&::after
+		top: $height
+	.inner-hamb
+		position: absolute
+		width: 100%
+		height: $t
+		top: $height / 2
+		background-color: $a
+		transition: 0.5s
+#hamburger
+	@include hamburger(25px, 15px, $a, 2px)
+	z-index: 2001
+
+#hamburger.hamburger-active
+	&::after
+		transform: rotate(45deg)
+		top: 5px
+	&::before
+		transform: rotate(-45deg)
+		top: 5px
+	.inner-hamb
+		opacity: 0
+		transform: translateX(100px)
+
+@media only screen and (max-width : 1440px)
+	//
+@media only screen and (max-width : 1200px)
+	//
+@media only screen and (max-width : 992px)
+	//
+@media only screen and (max-width : 768px)
+	//
+@media only screen and (max-width : 560px)
+	//
+@media only screen and (max-width : 480px)
+	//
+@media only screen and (max-width : 320px)
+	//

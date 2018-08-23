@@ -1,14 +1,27 @@
-.blocker
+.notification
 	position: fixed
-	width: 100%
-	height: 100%
 	top: 0
-	left: 0
-	background-color: rgba($d, 0.5)
-	z-index: -100
+	right: 0
+	max-width: 350px
+	width: 100%
+	z-index: 9999
+	background-color: $l
+	padding: 20px
+	border: 1px solid $d
+	transform: translateX(100%)
 	opacity: 0
 	transition: 0.5s
-	cursor: pointer
+	&:hover
+		opacity: 1
+		transform: translateX(0)
+.offline, .message-error
+	border-color: red
+.online, .message-success
+	border-color: green
+
+.notification-visible
+	transform: translate(0)
+	opacity: 1
 
 @media only screen and (max-width : 1440px)
 	//

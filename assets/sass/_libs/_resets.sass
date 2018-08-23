@@ -26,10 +26,10 @@
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
-	color: $l
+	color: $d
 body input:required:valid,
 body textarea:required:valid
-	color: $l
+	color: $d
 
 html, body
 	height: 100%
@@ -43,14 +43,13 @@ html, body
 *::-webkit-scrollbar-thumb
 	background-color: $a
 body
-	font-size: $body-fz-xl
+	font-size: 20px
 	min-width: 320px
 	position: relative
 	line-height: 1.2
 	font-family: $default-font
 	opacity: 1
 	color: $d
-	font-weight: 300
 h1,h2,h3,h4,h5,h6,ul,menu,li
 	margin: 0
 	padding: 0
@@ -59,6 +58,11 @@ label
 	cursor: pointer
 input, textarea, a, button, select
 	outline: none
+textarea
+	overflow: hidden
+	overflow-y: auto
+	white-space: pre-wrap
+	resize: none
 a
 	text-decoration: none
 	color: $d

@@ -1,8 +1,10 @@
-.h1
-	font-size: 60px
-	color: $d
-	line-height: 1
-	margin-bottom: $space
+@import "_mixins/links"
+.link
+	@include link ($d, $a, 1px, 0)
+.active-link
+	color: $a
+	&::before, &::after
+		width: 50%
 
 @media only screen and (max-width : 1440px)
 	//
