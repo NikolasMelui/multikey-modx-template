@@ -19,5 +19,8 @@ ht.access
 /node_modules/
 system
 
+# Log files
+*.log
+
 # Backups
 _backup
