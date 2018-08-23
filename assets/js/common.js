@@ -1,4 +1,61 @@
-// Active link (linkactivator)
+(function() {
+	function Selector(options) {
+		var _ = this;
+		_.selector = $('.Selector');
+		_.build = function() {
+			_.selector.each(function(i) {
+				$(this).wrap('<div class="wrapSelector"></div>');
+				$(this)
+					.parent()
+					.append('<div class="select-head"></div>');
+				$(this)
+					.parent()
+					.append('<ul class="select-list"></ul>');
+				var opt = $(this).find('option');
+				var ul = [];
+				opt.each(function(i) {
+					var wrap = opt
+						.parent()
+						.parent()
+						.find('ul');
+					var selectHead = opt
+						.parent()
+						.parent()
+						.find('.select-head');
+					ul.push($(this).text());
+					if (ul.length == opt.length) {
+						for (var i = 0; i < ul.length; i++) {
+							selectHead.text(ul[0]);
+							if (ul[i + 1] != undefined) {
+								wrap.append('<li>' + ul[i + 1] + '</li>');
+							}
+						}
+					}
+					if (opt.length == i + 1) {
+						ul = [];
+					}
+				});
+			});
+		};
+		_.init = function() {
+			_.build();
+		};
+	}
+	window.Selector = Selector;
+})();
+
+var selector = new Selector({
+	input: '.select',
+});
+selector.init();
+
+//Mobile menu
+$('#mob-mnu').mmenu({
+	btn: '#hamburger',
+	close_elements: '.blocker',
+});
+
+// LinkActivator
 var linkActivator = new linkActivator({
 	scrollContainer: '#scroll-container',
 	link: '.link',
@@ -55,7 +112,7 @@ var animator = new Animator({
 });
 animator.init();
 
-// Progress Bar (site scroll)
+// Progress
 var toolbar = $('.toolbar');
 $('.screen-scroll').scroll(function() {
 	var scrollTop = $(this)[0].scrollTop,
@@ -64,26 +121,17 @@ $('.screen-scroll').scroll(function() {
 		progress = (100 * scrollTop) / (scrollHeight - height);
 	$('.progress').css('width', progress + '%');
 	if (scrollTop > 100) {
-		toolbar.addClass('white-theme');
+		toolbar.addClass('active-toolbar');
 	} else {
-		toolbar.removeClass('white-theme');
+		toolbar.removeClass('active-toolbar');
 	}
 });
 
-// Mobile menu
-var mob_menu = new mmenu({
-	menu: '.mob-mnu',
-	blocker: '.blocker',
-	hamburger: '.hamburger',
-	page: '.page',
-});
-mob_menu.init();
-
-// Popup
+//Popup
 var popup = new spop({
 	popup: '.open-popup',
 	close_btn: '.close-popup, .blocker',
-	from: '.hidden',
+	from: '#Hidden__Container',
 	to: 'body',
 	wrap: 'html',
 	when_open: function() {},
@@ -91,7 +139,7 @@ var popup = new spop({
 });
 popup.init();
 
-// Slider
+//Slider
 var space_slide = new sslider({
 	slider: '.slider',
 	row: 1,
@@ -134,7 +182,6 @@ var space_slide = new sslider({
 });
 space_slide.init();
 
-// Mail sender
 var successMsg = $('.message-success'),
 	errorMsg = $('.message-error');
 $('form').submit(function() {
@@ -191,17 +238,14 @@ window.addEventListener(
 	false
 );
 
-// Phone mask
 $('.mask-phone').mask('+7 (999) 999-99-99');
 
-// Parallax
 $('.sect').mousemove(function(e) {
 	var x = e.screenX / 40 + 50 + '%';
 	var y = e.screenY / 40 + '%';
 	$('.bg-overlay-d').css('background-position', x + ' ' + y);
 });
 
-// Preloader
 $(window).on('load', function() {
 	var preloader = $('.preloader'),
 		body = $('body');
