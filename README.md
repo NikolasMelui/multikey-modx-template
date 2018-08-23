@@ -1,5 +1,6 @@
 Multikey Modx Template
 ======
+##### [Russian][russian-docs]
 Multikey Modx Template powered by [NikolasMelui][nikolasmelui] and [RinatDav][rinatdav] for [multikey.studio][multikeystudio]
 
 # Important!
@@ -133,3 +134,4 @@ SOFTWARE.
    [php]: <http://php.net/downloads.php>
    [mysql]: <https://www.mysql.com/downloads/>
    [nodejs]: <http://nodejs.org>
+   [russian-docs]: <https://github.com/NikolasMelui/multikey-modx-template/blob/master/README-ru.md>
