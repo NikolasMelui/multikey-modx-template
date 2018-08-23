@@ -4,17 +4,17 @@
 		"type": "git",
 		"url": "https://github.com/NikolasMelui/multikey-modx-template.git"
 	},
-	"version": "2.0.0",
+	"version": "3.0.0",
 	"description": "Multikey Modx Template",
 	"main": "gulpfile.js",
 	"scripts": {
-		"dev": "NODE_ENV=development ./node_modules/.bin/gulp4",
+		"dev": "NODE_ENV=development ./node_modules/.bin/gulp",
 		"prod": "NODE_ENV=production ./node_modules/.bin/gulp"
 	},
 	"author": "NikolasMelui & Rinat Dav",
 	"license": "ISC",
 	"devDependencies": {
-		"gulp4": "^4.0.3",
+		"gulp": "gulpjs/gulp#4.0",
 		"browser-sync": "^2.24.5",
 		"gulp-autoprefixer": "^5.0.0",
 		"gulp-cache": "^1.0.2",
@@ -29,8 +29,5 @@
 		"gulp-sourcemaps": "^2.6.4",
 		"gulp-uglify": "^3.0.0",
 		"stream-combiner2": "^1.1.1"
-	},
-	"peerDependencies": {
-		"gulp": ">=4"
 	}
 }
