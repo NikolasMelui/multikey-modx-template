@@ -1,6 +1,6 @@
 Multikey Modx Template
 ======
-Multikey Modx Template powered by [NikolasMelui][nikolasmelui] and [RinatDav][rinatdav] for [multikey.studio][multikeystudio].
+Multikey Modx Template powered by [NikolasMelui][nikolasmelui] and [RinatDav][rinatdav] for [multikey.studio][multikeystudio]
 
 # Important!
 
@@ -87,7 +87,7 @@ This is an opensource project. All contributions are welcome. Make a fork and go
 | es6        | -                                                             |
 | Patterns   | -                                                             |
 | Webpack    | -                                                             |
-| ESLint     | -                                                             |
+| ESLint     | env                                                           |
 | Mocha      | -                                                             |
 | CI\CD      | -                                                             |
 | SFTP\rsync | -                                                             |
