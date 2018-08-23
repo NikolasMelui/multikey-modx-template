@@ -1,35 +1,35 @@
 Multikey Modx Template
-##### [Russian][russian-docs]
-Multikey Modx Template powered by [NikolasMelui][nikolasmelui] and [RinatDav][rinatdav] for [multikey.studio][multikeystudio]
+======
+##### [English][english-docs]
+Multikey Modx Template разработан [NikolasMelui][nikolasmelui] и [RinatDav][rinatdav] для [multikey.studio][multikeystudio]
 
-# Important!
+# ВАЖНО!
 
-You need to install [Gitify][gitify] first.
+Для корректной работы сперва установите [Gitify][gitify].
 
-You also need:
-  - [Apache][apache], [Nginx][nginx] or another web server
+Также вам понадобятся:
+  - [Apache][apache], [Nginx][nginx] или другой веб-сервер
   - [PHP][php] v5+ and Composer
   - [MySQL][mysql]
   - [Node.js][nodejs] v7+ and NPM
 
-You can think this is useless template with old technologies and MODX is bad and dead. Ok.
-
+Вы можете думать, что это бесполезный шаблон, использующий старые технологии, что MODX - мёртв и стар. Окда.
 > Go and fu** yourself. J. Stat.
 
-If you need, you can create a new MySQL database for new MODX Revo project, but usually Gitify creates it automatically.
-If you want to do it yourself:
-* __db_name__ - your db name;
-* __user_name__ - your user name;
-* __user_password__ - your user password;
+При необходимости вы можете самостоятельно создать базу данных MySQL для вашего проекта на MODX Revo, однако такая функциональность присутствует в Gitify из коробки и база данных создается при установке MODX автоматически.
+Если же вы хотите сделать это самостоятельно:
+* __db_name__ - ;
+* __user_name__ - user name;
+* __user_password__ - user password;
 ```
 $ mysql -u root -p
 mysql> CREATE DATABASE db_name;
 mysql> GRANT ALL PRIVILEGES ON db_name.* TO **user_name**@localhost IDENTIFIED BY 'user_password';
 ```
 
-## Installation
+## Установка
 
-First install [Gitify][gitify]:
+Сперва установите [Gitify][gitify]:
 ```
 $ git clone https://github.com/modmore/Gitify.git Gitify
 $ cd Gitify
@@ -37,53 +37,53 @@ $ composer install
 $ chmod +x Gitify
 ```
 
-Create a directory for the new project and cd into it:
+Создайте директорию для вашего нового проекта и перейдите в неё:
 ```
 $ mkdir ${new_project} && cd ${new_project}
 ```
-Clone the template on your local mashine into created directory:
+Скопируйте шаблон на ваш копмьютер в созданную директорию:
 ```
 $ git clone https://github.com/NikolasMelui/multikey-modx-template.git ./
 ```
-Install the latest MODX Revo version:
+Установите актуальную версию MODX Revo:
 ```
 $ Gitify modx:install
 ```
-Install packages:
+Установите пакеты (packages):
 ```
 $ Gitify package:install --all
 ```
-Now build the project installation:
+Завершите настройку шаблона сериализацией данных в базу:
 ```
 $ Gitify build --force
 ```
 
-Use this sh script (if you need) to add necessary rules for files and folders:
+При не обходимости используйте этот скрипт для присвоения необходимых прав для файлов и папок:
 ```
 $ sh rules.sh
 ```
 
-And now you have a ready-made template.
+Поздравляем, шаблон готов к работе.
 
-### Quick Start
+### Быстрый старт
 
-Use npm to install frontend dependencies and run browserSync and watchers to realy 'reactive' development:
+Используйте npm для установки фронтенд зависимостей и запуска browserSync для "реактивной" разработки:
 ```
 $ npm i
 $ npm run dev
 ```
 
-... and this command (if you need) to create a minified frontend files:
+... при использовании данной команды вы получите минифицированные версии своих фронтенд файлов:
 ```
 $ npm run prod
 ```
 
-### Development
+## Разработка
 
-Want to contribute? Great!
-This is an opensource project. All contributions are welcome. Make a fork and go on!
+Хотите стать разработчиком этого проекта? Супер!
+Это opensource проект. Все контрибуции приветствуются. Форкайте проект себе и вперёд!
 
-| Todos      | Status                                                        |
+| Планы      | Статус                                                        |
 | ---------- | ------------------------------------------------------------- |
 | es6        | -                                                             |
 | Patterns   | -                                                             |
@@ -92,10 +92,11 @@ This is an opensource project. All contributions are welcome. Make a fork and go
 | Mocha      | -                                                             |
 | CI\CD      | -                                                             |
 | SFTP\rsync | -                                                             |
-| Docker     | https://github.com/NikolasMelui/docker-multikey-modx-template |
+| Docker     | https://github.com/NikolasMelui/multikey-modx-template        |
 | Kubernates | -                                                             |
 
-License
+___
+Лицензия
 ----
 MIT License
 
@@ -119,7 +120,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-**From developers 2 developers.**
+**От разработчиков к разработчикам.**
 [NikolasMelui][nikolasmelui]
 [RinatDav][rinatdav]
 
@@ -133,4 +134,4 @@ SOFTWARE.
    [php]: <http://php.net/downloads.php>
    [mysql]: <https://www.mysql.com/downloads/>
    [nodejs]: <http://nodejs.org>
-   [russian-docs]: <https://github.com/NikolasMelui/multikey-modx-template/blob/master/README-ru.md>
+   [english-docs]: <https://github.com/NikolasMelui/multikey-modx-template/blob/master/README.md>
