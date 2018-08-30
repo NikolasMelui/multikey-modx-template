@@ -13,10 +13,10 @@ properties: 'a:0:{}'
     {include 'fixed-elements'}
     {include 'header'}
     <div class="screen-scroll" id="scroll-container">
-			<section class="sect main-sect" id="sect-1" style="background-image: url()">
+			<section class="sect main-sect" id="sect-1" style="background-image: url({$_modx->resource["page_image"]})">
 				<div class="cont-fluid column align-center">
 					<div class="anim-elem box fadeInUp"></div>
-					<h1 class="h1 text-center">Cool <span class="text-a">template</span> by multikey.studio</h1>
+					<h1 class="h1 text-center">{$_modx->resource["title"]}</h1>
 				</div>
 			</section>
 			<section class="sect column" id="sect-2">
