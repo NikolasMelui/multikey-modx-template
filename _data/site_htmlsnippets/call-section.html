@@ -9,23 +9,18 @@ properties: 'a:0:{}'
 
 <section class="sect" id="call-sect">
 	<div class="cont-fluid content-center">
-		<form class="flex column align-center xl-4 lg-6 md-8 sm-10 xsm-12">
-			<label class="h3 text-center" for="call-phone">Остались вопросы?</label>
-			<div class="form-group">
-				<input type="text" name="name" placeholder="Ваше имя:">
-			</div>
-			<div class="form-group">
-				<input type="text" class="mask-phone" name="phone" id="call-phone" placeholder="Ваш телефон" required>
-			</div>
-			<div class="form-group textarea">
-				<textarea name="message" placeholder="Ваше сообщение"></textarea>
-			</div>
-			<button class="btn-d-big">Отправить</button>
-			<div class="polit">Нажимая на «Подтвердить» вы даете согласие на
-				<br>
-				<a class="open-popup appender" href="#politics">обработку персональных данных</a>
-			</div>
-		</form>
+	  {'!AjaxForm' | snippet : [
+  	  'snippet'=>'FormIt'
+      'hooks'=>'email, spam'
+      'form'=>'tpl_call_section_form'
+      'emailTpl'=>'tpl_call_section_email'
+      'emailSubject'=>"Заказ c {$_modx->config['site_name']}"
+      'emailTo'=>"{1 | resource : 'mailto'}"
+      'emailFrom'=>"{1 | resource : 'mailfrom'}"
+      'validate'=>'phone:required, name, message, email_home:blank'
+      'validationErrorMessage'=>'В форме содержатся ошибки!'
+      'successMessage'=>'Сообщение успешно отправлено!'
+  	 ]}
 		<div class="contacts flex column content-sb xl-4 lg-6 sm-12">
 		  <h3 class="h3">Наши контакты</h3>
 		  <div class="contact flex align-center">
