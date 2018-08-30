@@ -1,0 +1,198 @@
+#gitifycut
+data_directory: _data/
+backup_directory: _backup/
+data:
+  contexts:
+    class: modContext
+    primary: key
+  context_settings:
+    class: modContextSetting
+    primary:
+      - context_key
+      - key
+  content_type:
+    class: modContentType
+    primary: name
+  site_tmplvars:
+    class: modTemplateVar
+    primary: name
+  site_tmplvars_templates:
+    class: modTemplateVarTemplate
+    primary:
+      - tmplvarid
+      - templateid
+  categories:
+    class: modCategory
+    primary: category
+    truncate_on_force:
+      - modCategoryClosure
+  site_templates:
+    class: modTemplate
+    primary: templatename
+    extension: .html
+  site_htmlsnippets:
+    class: modChunk
+    primary: name
+    extension: .html
+  site_snippets:
+    class: modSnippet
+    primary: name
+    extension: .php
+  site_plugins:
+    class: modPlugin
+    primary: name
+    extension: .php
+  site_plugin_events:
+    class: modPluginEvent
+    primary:
+      - pluginid
+      - event
+  system_eventnames:
+    class: modEvent
+    primary: name
+  namespaces:
+    class: modNamespace
+    primary: name
+  system_settings:
+    class: modSystemSetting
+    primary: key
+    exclude_keys:
+      - editedon
+  extension_packages:
+    class: modExtensionPackage
+    primary: namespace
+    exclude_keys:
+      - created_at
+      - updated_at
+  migx_formtabs:
+    class: migxFormtab
+    primary: id
+    package: migx
+  migx_formtab_fields:
+    class: migxFormtabField
+    primary: id
+  migx_config_elements:
+    class: migxConfigElement
+    primary: id
+  migx_elements:
+    class: migxElement
+    primary: id
+  migx_configs:
+    class: migxConfig
+    primary: id
+  ms2_products:
+    class: msProductData
+    primary: id
+    package: minishop2
+  ms2_vendors:
+    class: msVendor
+    primary: id
+  ms2_product_categories:
+    class: msCategoryMember
+    primary:
+      - product_id
+      - category_id
+  ms2_product_options:
+    class: msProductOption
+  ms2_product_files:
+    class: msProductFile
+    primary: id
+  ms2_deliveries:
+    class: msDelivery
+    primary: id
+  ms2_payments:
+    class: msPayment
+    primary: id
+  ms2_delivery_payments:
+    class: msDeliveryMember
+    primary:
+      - delivery_id
+      - payment_id
+  ms2_orders:
+    class: msOrder
+    primary: id
+  ms2_order_statuses:
+    class: msOrderStatus
+    primary: id
+  ms2_order_logs:
+    class: msOrderLog
+    primary: id
+  ms2_order_addresses:
+    class: msOrderAddress
+    primary: id
+  ms2_order_products:
+    class: msOrderProduct
+    primary: id
+  ms2_links:
+    class: msLink
+    primary: id
+  ms2_product_links:
+    class: msProductLink
+    primary:
+      - link
+      - master
+      - slave
+  ms2_customer_profiles:
+    class: msCustomerProfile
+    primary: id
+  ms2_options:
+    class: msOption
+    primary: id
+  ms2_category_options:
+    class: msCategoryOption
+    primary:
+      - option_id
+      - category_id
+  fc_sets:
+    class: modFormCustomizationSet
+    primary: id
+  fc_profiles:
+    class: modFormCustomizationProfile
+    primary: id
+  fc_profile_usergroups:
+    class: modFormCustomizationProfileUserGroup
+    primary:
+      - usergroup
+      - profile
+  fc_action_dom:
+    class: modActionDom
+    primary:
+      - set
+      - name
+  mediasources:
+    class: modMediaSource
+    primary: id
+  mediasource_elements:
+    class: sources.modMediaSourceElement
+    primary:
+      - source
+      - object_class
+      - object
+      - context_key
+  dashboards:
+    class: modDashboard
+    primary:
+      - id
+      - name
+  dashboard_widgets:
+    class: modDashboardWidget
+    primary: id
+  dashboard_widget_placement:
+    class: modDashboardWidgetPlacement
+    primary:
+      - dashboard
+      - widget
+packages:
+  modx.com:
+    service_url: 'https://rest.modx.com/extras/'
+    description: 'The official MODX transport provider for 3rd party components.'
+    packages:
+      - pdotools-2.11.2-pl
+      - phpthumbon-1.3.1-pl
+      - migx-2.12.0-pl
+      - dbadmin-1.1.3-pl
+      - tagelementplugin-1.2.4-pl1
+      - seopro-1.3.0-pl
+      - ace-1.6.5-pl
+      - tinymce-4.3.4-pl
+      - translit-1.0.0-beta

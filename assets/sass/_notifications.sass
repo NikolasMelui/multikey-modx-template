@@ -1,0 +1,39 @@
+.notification
+	position: fixed
+	top: 0
+	right: 0
+	max-width: 350px
+	width: 100%
+	z-index: 9999
+	background-color: $l
+	padding: 20px
+	border: 1px solid $d
+	transform: translateX(100%)
+	opacity: 0
+	transition: 0.5s
+	&:hover
+		opacity: 1
+		transform: translateX(0)
+.offline, .message-error
+	border-color: red
+.online, .message-success
+	border-color: green
+
+.notification-visible
+	transform: translate(0)
+	opacity: 1
+
+@media only screen and (max-width : 1440px)
+	//
+@media only screen and (max-width : 1200px)
+	//
+@media only screen and (max-width : 992px)
+	//
+@media only screen and (max-width : 768px)
+	//
+@media only screen and (max-width : 560px)
+	//
+@media only screen and (max-width : 480px)
+	//
+@media only screen and (max-width : 320px)
+	//

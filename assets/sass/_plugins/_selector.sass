@@ -1,0 +1,57 @@
+.wrapSelector
+	position: relative
+	padding: $space / 2
+	border-bottom: 1px solid $light-grey
+	border-radius: $radius
+	background-color: $l
+	cursor: pointer
+	width: 50%
+	margin-bottom: $space
+	transition: 0.5s
+	&::after
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 20px
+		margin: auto
+		width: 10px
+		height: 10px
+		border-top: 1px solid $d
+		border-right: 1px solid $d
+		transform: rotate(135deg)
+	.Selector
+		display: none
+	.select-list
+		position: absolute
+		top: 0
+		left: 0
+		padding: $space / 2 0 $space 0
+		background-color: $l
+		z-index: -100
+		visibility: hidden
+		width: 100%
+		opacity: 0
+		transform: translateY(-80px)
+		transition: 0.3s
+		li
+			border-bottom: 1px solid $light-grey
+			padding: $space / 4 $space / 2
+			transition: 0.5s
+			border-radius: $radius
+			&:hover
+				background-color: $light-grey
+	&:hover
+		box-shadow: $shadow
+		.select-list
+			transition: 0.5s
+			visibility: visible
+			z-index: 999
+			opacity: 1
+			transform: translateY(0)
+	.list-down
+		transition: 0.5s
+		visibility: visible
+		z-index: 999
+		opacity: 1
+		transform: translateY(0)

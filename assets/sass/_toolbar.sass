@@ -1,0 +1,42 @@
+.toolbar
+	position: fixed
+	width: calc(100% - 4px)
+	z-index: 2000
+	height: 80px
+	padding: $space / 2 0
+	top: 0
+	left: 0
+	transition: 0.5s
+	.cont-fluid
+		height: 100%
+	.menu
+		height: 100%
+		.link
+			margin-left: $space
+			&::after, &::before
+				background-color: $a
+	.btn-d
+		margin-left: $space
+
+.active-toolbar
+	background-color: $l
+
+@media only screen and (max-width : 1440px)
+	//
+@media only screen and (max-width : 1200px)
+	//
+@media only screen and (max-width : 992px)
+	//
+@media only screen and (max-width : 768px)
+	.toolbar
+		height: 60px
+		.cont-fluid
+			justify-content: flex-start
+		.logo
+			margin-right: $space
+@media only screen and (max-width : 560px)
+	//
+@media only screen and (max-width : 480px)
+	//
+@media only screen and (max-width : 320px)
+	//

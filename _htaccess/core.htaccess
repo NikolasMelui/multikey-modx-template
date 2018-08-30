@@ -1,0 +1,16 @@
+IndexIgnore */*
+<files>
+    Order Deny,Allow
+    Deny from all
+</files>
+ 
+AuthType Basic
+AuthName "... and who r u?"
+AuthUserFile /your/path/.htpasswd
+Require valid-user
+ 
+<files .htpasswd="">
+   deny from all
+</files>
+ 
+ErrorDocument 401 "401 Authorisation Required"

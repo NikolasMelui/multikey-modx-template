@@ -1,0 +1,6 @@
+id: 7
+name: JSON
+description: JSON
+mime_type: application/json
+file_extensions: .json
+headers: null

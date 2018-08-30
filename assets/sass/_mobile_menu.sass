@@ -1,0 +1,50 @@
+#mob-mnu
+	position: fixed
+	top: 0
+	right: 0
+	width: 80%
+	padding: 0 $space
+	height: 100%
+	z-index: 0
+	background-color: $l
+	overflow-y: auto
+	overflow-x: hidden
+	.topbar
+		padding: $space / 2 0
+		border-bottom: 1px solid $d
+	.screen-link
+		padding: $space 0
+		transition: 0.5s
+	.topbar
+		height: 60px
+	.bottombar
+		border-top: 1px solid $d
+		padding: $space / 2 0
+	.contact
+		margin: $space / 4 0
+		font-size: 14px
+		img
+			width: 15px
+	.social
+		margin-top: $space / 2
+.mob-mnu-active
+	.page
+		transform: translateX(-80%)
+	.blocker
+		z-index: 9998
+		opacity: 1
+	
+@media only screen and (max-width : 1440px)
+	//
+@media only screen and (max-width : 1200px)
+	//
+@media only screen and (max-width : 992px)
+	//
+@media only screen and (max-width : 768px)
+	//
+@media only screen and (max-width : 560px)
+	//
+@media only screen and (max-width : 480px)
+	//
+@media only screen and (max-width : 320px)
+	//

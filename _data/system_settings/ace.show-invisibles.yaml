@@ -1,5 +1,5 @@
 key: ace.show_invisibles
-value: '0'
+value: '1'
 xtype: combo-boolean
 namespace: ace
 area: general

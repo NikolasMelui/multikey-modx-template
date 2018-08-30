@@ -1,0 +1,3 @@
+name: dbadmin
+path: '{core_path}components/dbadmin/'
+assets_path: '{base_path}dbAdmin/assets/components/dbadmin/'

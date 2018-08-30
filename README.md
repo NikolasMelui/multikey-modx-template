@@ -1,6 +1,6 @@
 Multikey Modx Template
-======
-Multikey Modx Template powered by [NikolasMelui][nikolasmelui] and [RinatDav][rinatdav] for Multikey Studio.
+##### [Russian][russian-docs]
+Multikey Modx Template powered by [NikolasMelui][nikolasmelui] and [RinatDav][rinatdav] for [multikey.studio][multikeystudio]
 
 # Important!
 
@@ -13,9 +13,19 @@ You also need:
   - [Node.js][nodejs] v7+ and NPM
 
 You can think this is useless template with old technologies and MODX is bad and dead. Ok.
-__
 
 > Go and fu** yourself. J. Stat.
+
+If you need, you can create a new MySQL database for new MODX Revo project, but usually Gitify creates it automatically.
+If you want to do it yourself:
+* __db_name__ - your db name;
+* __user_name__ - your user name;
+* __user_password__ - your user password;
+```
+$ mysql -u root -p
+mysql> CREATE DATABASE db_name;
+mysql> GRANT ALL PRIVILEGES ON db_name.* TO **user_name**@localhost IDENTIFIED BY 'user_password';
+```
 
 ## Installation
 
@@ -27,27 +37,33 @@ $ composer install
 $ chmod +x Gitify
 ```
 
-If there is no unzip command installed in your system:
+Create a directory for the new project and cd into it:
 ```
-$ sudo apt-get install unzip
+$ mkdir ${new_project} && cd ${new_project}
 ```
-
-Clone the template to your local mashine:
+Clone the template on your local mashine into created directory:
 ```
-$ git clone https://github.com/NikolasMelui/multikey-modx-template.git
+$ git clone https://github.com/NikolasMelui/multikey-modx-template.git ./
 ```
-Install the latest MODX and all packages:
+Install the latest MODX Revo version:
 ```
 $ Gitify modx:install
-$ Gitify packages:install --all
 ```
-
+Install packages:
+```
+$ Gitify package:install --all
+```
 Now build the project installation:
 ```
 $ Gitify build --force
 ```
 
-You can ```chmod 777``` on all files you need if you have problems with permissions after build the project.
+Use this sh script (if you need) to add necessary rules for files and folders:
+```
+$ sh rules.sh
+```
+
+And now you have a ready-made template.
 
 ### Quick Start
 
@@ -57,7 +73,7 @@ $ npm i
 $ npm run dev
 ```
 
-... and this command  is needed to create a minified frontend files:
+... and this command (if you need) to create a minified frontend files:
 ```
 $ npm run prod
 ```
@@ -67,19 +83,41 @@ $ npm run prod
 Want to contribute? Great!
 This is an opensource project. All contributions are welcome. Make a fork and go on!
 
-| Todos | Status |
-| ------ | ------ |
-| es6 | - |
-| Webpack | - |
-| ESLint | - |
-| Mocha | - |
-| CI\CD | - |
-| Docker | - |
-| Kubernates | - |
+| Todos      | Status                                                        |
+| ---------- | ------------------------------------------------------------- |
+| es6        | -                                                             |
+| Patterns   | -                                                             |
+| Webpack    | -                                                             |
+| ESLint     | env                                                           |
+| Mocha      | -                                                             |
+| CI\CD      | -                                                             |
+| SFTP\rsync | -                                                             |
+| Docker     | https://github.com/NikolasMelui/docker-multikey-modx-template |
+| Kubernates | -                                                             |
 
 License
 ----
 MIT License
+
+Copyright (c) 2018 NikolasMelui
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 **From developers 2 developers.**
 [NikolasMelui][nikolasmelui]
@@ -88,9 +126,11 @@ MIT License
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
    [nikolasmelui]: <https://github.com/NikolasMelui>
    [rinatdav]: <https://github.com/RinatDav>
-   [gitify]: <http://modmore.github.io/Gitify/>
+   [multikeystudio]: <https://multikey.studio>
+   [gitify]: <http://modmore.github.io/Gitify>
    [apache]: <https://httpd.apache.org/download.cgi>
    [nginx]: <https://nginx.ru/ru/download.html>
    [php]: <http://php.net/downloads.php>
    [mysql]: <https://www.mysql.com/downloads/>
    [nodejs]: <http://nodejs.org>
+   [russian-docs]: <https://github.com/NikolasMelui/multikey-modx-template/blob/master/README-ru.md>

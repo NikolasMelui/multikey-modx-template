@@ -1,14 +1,14 @@
-const gulp =  require('gulp');
+const gulp = require('gulp');
 const browserSync = require('browser-sync');
 
 module.exports = options => {
-  return () => {
-    browserSync({
-      notify: true,
-		  port: 8081
-    });
-    gulp.watch('assets/**/*.{sass,css,js}').on('change', function() {
-    browserSync.reload();
-  });
-  };
+	return () => {
+		browserSync({
+			notify: true,
+			port: 8081,
+		});
+		gulp.watch('assets/**/*.{sass,css,js}').on('change', function() {
+			browserSync.reload();
+		});
+	};
 };

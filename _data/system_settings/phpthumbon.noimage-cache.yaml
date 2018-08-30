@@ -1,0 +1,4 @@
+key: phpthumbon.noimage_cache
+value: '{assets_path}components/phpthumbon/cache/'
+namespace: phpthumbon
+area: path

@@ -1,0 +1,7 @@
+id: 8
+name: PDF
+description: 'PDF Files'
+mime_type: application/pdf
+file_extensions: .pdf
+headers: null
+binary: 1
