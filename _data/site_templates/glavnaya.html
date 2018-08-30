@@ -6,13 +6,13 @@ properties: 'a:0:{}'
 
 <!DOCTYPE html>
 <html lang="ru">
-[[$head]]
+{include 'head'}
 <body>
-  [[$mob-mnu]]
+  {include 'mob-mnu'}
   <div class="page">
-		[[$fixed-elements]]
-		[[$header]]
-		[[$blocker]]
+    {include 'fixed-elements'}
+    {include 'header'}
+    {include 'blocker'}
     <div class="screen-scroll" id="scroll-container">
 			<section class="sect main-sect" id="sect-1" style="background-image: url()">
 				<div class="cont-fluid column align-center">
@@ -274,11 +274,10 @@ properties: 'a:0:{}'
   				</div>
   			</form>
 		  </div>
-      [[$politics]]
+		  {include 'politics'}
   	</div>
 	</div>
-	[[$scripts-css]]
-	[[$__browserSync]]
-
+	{include 'scripts-css'}
+	{include '__browserSync'}
 </body>
 </html>
