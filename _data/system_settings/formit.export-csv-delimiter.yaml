@@ -1,0 +1,4 @@
+key: formit.export_csv_delimiter
+value: ;
+namespace: formit
+area: system

@@ -1,0 +1,5 @@
+key: formit.cleanform.days
+value: '30'
+xtype: numberfield
+namespace: formit
+area: system
