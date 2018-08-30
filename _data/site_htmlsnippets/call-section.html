@@ -1,0 +1,30 @@
+id: 9
+source: 1
+name: call_section
+description: ''
+category: Контакты
+properties: 'a:0:{}'
+
+-----
+
+<section class="sect" id="call-sect">
+	<div class="cont-fluid content-center">
+		<form class="flex column align-center xl-4 lg-6 md-8 sm-10 xsm-12">
+			<label class="h3 text-center" for="call-phone">Остались вопросы?</label>
+			<div class="form-group">
+				<input type="text" name="name" placeholder="Ваше имя:">
+			</div>
+			<div class="form-group">
+				<input type="text" class="mask-phone" name="phone" id="call-phone" placeholder="Ваш телефон" required>
+			</div>
+			<div class="form-group textarea">
+				<textarea name="message" placeholder="Ваше сообщение"></textarea>
+			</div>
+			<button class="btn-d-big">Отправить</button>
+			<div class="polit">Нажимая на «Подтвердить» вы даете согласие на
+				<br>
+				<a class="open-popup appender" href="#politics">обработку персональных данных</a>
+			</div>
+		</form>
+	</div>
+</section>
