@@ -2,7 +2,7 @@ id: 4
 name: header
 description: ''
 category: 'Общие элементы страницы'
-properties: null
+properties: 'a:0:{}'
 
 -----
 
@@ -36,7 +36,7 @@ properties: null
 		<div class="navbar flex align-center">
 			<div class="contact flex align-center">
 				<img src="assets/img/phone.svg" alt="Телефон:" title="Телефон:">
-				<a href="tel:+7 (999) 999-99-99" class="link">+7 (999) 999-99-99</a>
+				<a href="tel:{1 | resource: 'phone'}" class="link">{1 | resource: 'phone'}</a>
 			</div>
 			<a href="#callback" class="btn-d open-popup appender lg-hidden">Обратный звонок</a>
 		</div>
