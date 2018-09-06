@@ -72,10 +72,7 @@ var animator = new Animator({
 	animator: 'animator',
 	offsetPercent: 80,
 	handler: function() {
-		if (
-			this.thsElem.hasClass('num') &&
-			this.thsElem.hasClass('animator') == false
-		) {
+		if (this.thsElem.hasClass('num') && this.thsElem.hasClass('animator') == false) {
 			var el = this.thsElem.find('.number');
 			for (var i = 0; i <= el.length; i++) {
 				if ($(el[i]).data('num') != undefined) {
@@ -128,16 +125,17 @@ $('.screen-scroll').scroll(function() {
 });
 
 //Popup
-var popup = new spop({
-	popup: '.open-popup',
-	close_btn: '.close-popup, .blocker',
+$('.open-modal').modal({
+	btn_close: '.close-modal',
 	from: '#Hidden__Container',
 	to: 'body',
-	wrap: 'html',
-	when_open: function() {},
-	when_close: function() {},
+	after_open: function() {
+		console.log('hi');
+	},
+	after_close: function() {
+		console.log('hui');
+	},
 });
-popup.init();
 
 //Slider
 var space_slide = new sslider({
@@ -246,9 +244,22 @@ $('.sect').mousemove(function(e) {
 	$('.bg-overlay-d').css('background-position', x + ' ' + y);
 });
 
-$(window).on('load', function() {
-	var preloader = $('.preloader'),
-		body = $('body');
+var preload = $('.inner-preload'),
+	width = 0,
+	timeout = 2000,
+	inter = 50,
+	interval = setInterval(function() {
+		width += (inter / timeout) * 100; // / 1000;
+		preload.css('width', width + '%');
+	}, inter);
+
+setTimeout(function() {
+	var preloader = $('.preloader');
 	preloader.fadeOut();
+	clearInterval(interval);
+	preload.css('width', '100%');
+}, timeout);
+$(window).on('load', function() {
+	var body = $('body');
 	body.addClass('ready');
 });

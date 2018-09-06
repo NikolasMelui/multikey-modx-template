@@ -1,0 +1,44 @@
+id: 9
+source: 1
+name: call_section
+description: ''
+category: Контакты
+properties: 'a:0:{}'
+
+-----
+
+<section class="sect" id="call-sect">
+	<div class="cont-fluid flex-wrap content-center">
+	  {'!AjaxForm' | snippet : [
+  	  'snippet'=>'FormIt'
+      'hooks'=>'email, spam'
+      'form'=>'tpl_call_section_form'
+      'emailTpl'=>'tpl_call_section_email'
+      'emailSubject'=>"Заказ c {$_modx->config['site_name']}"
+      'emailTo'=>"{1 | resource : 'mailto'}"
+      'emailFrom'=>"{1 | resource : 'mailfrom'}"
+      'validate'=>'phone:required, name, message, email_home:blank'
+      'validationErrorMessage'=>'В форме содержатся ошибки!'
+      'successMessage'=>'Сообщение успешно отправлено!'
+  	 ]}
+		<div class="contacts flex column xl-4 lg-6 sm-12">
+		  <h3 class="h3">Наши контакты</h3>
+		  <div class="contact flex align-center">
+				<img src="assets/img/phone.svg" alt="Телефон" title="Телефон">
+				<a href="tel:{1 | resource: 'phone'}" class="link">{1 | resource: 'phone'}</a>
+			</div>
+			<div class="contact flex align-center">
+				<img src="assets/img/mail.svg" alt="Почта" title="Почта">
+				<a href="mailto:{1 | resource: 'mail'}" class="link">{1 | resource: 'mail'}</a>
+			</div>
+			<div class="contact flex align-center">
+				<img src="assets/img/map.svg" alt="Адрес" title="Адрес">
+				<a href="{1 | resource: 'map_link'}" class="link" target="_blank">{1 | resource: 'address'}</a>
+			</div>
+			<div class="contact flex align-center">
+				<img src="assets/img/map.svg" alt="Время работы" title="Время работы">
+				<div class="link">{1 | resource: 'work_time'}</div>
+			</div>
+		</div>
+	</div>
+</section>

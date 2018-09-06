@@ -1,0 +1,13 @@
+id: 13
+source: 1
+type: image
+name: page_image
+caption: 'Изображение страницы'
+category: 'Общие элементы страницы'
+elements: ''
+display: default
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:0:{}'
+output_properties: 'a:0:{}'
+content: ''

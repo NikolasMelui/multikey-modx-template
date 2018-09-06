@@ -1,0 +1,25 @@
+id: 12
+source: 1
+name: tpl_call_modal_email
+description: ''
+category: Формы
+properties: 'a:0:{}'
+
+-----
+
+<h3>Заказ звонка с {$_modx->config['site_name']}</h3>
+<h4>Данные клиента:</h4>
+<table>
+  <tr>
+    <td>Имя:</td>
+    <td>{$name}</td>
+  </tr>
+  <tr>
+    <td>Телефон:</td>
+    <td>{$phone}</td>
+  </tr>
+  <tr>
+    <td>Со страницы:</td>
+    <td><a href="{$_modx->config['site_url']}{$_modx->makeUrl($id)}">{$_modx->resource.pagetitle}</a></td>
+  </tr>
+</table>
