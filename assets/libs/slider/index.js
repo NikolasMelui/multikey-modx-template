@@ -38,10 +38,7 @@
 		_.responsive = options.responsive;
 		_.filter_func = options.filter_func;
 		_.filter = options.filter || false;
-		_.filter_wrap =
-			$(options.filter_wrap).length != 0
-				? $(options.filter_wrap)
-				: $('.filter');
+		_.filter_wrap = $(options.filter_wrap).length != 0 ? $(options.filter_wrap) : $('.filter');
 		_.chosen =
 			_.filter_wrap.find(options.filter_link).length != 0
 				? _.filter_wrap.find(options.filter_link)
@@ -102,32 +99,18 @@
 				_.prev_dot_index = _.dot_index;
 				_.prev_slide_index = _.slide_index;
 				_.translate = _.slide.width() * _.items_slide;
-				ths_arrow.hasClass('next')
-					? (_.direction = 'next')
-					: (_.direction = 'prev');
-				if (
-					ths_arrow.hasClass('next') &&
-					_.transform < _.slider_inner.width() - _.slide.width() * _.items
-				) {
+				ths_arrow.hasClass('next') ? (_.direction = 'next') : (_.direction = 'prev');
+				if (ths_arrow.hasClass('next') && _.transform < _.slider_inner.width() - _.slide.width() * _.items) {
 					_.transform += _.translate;
 					_.dot_index = _.transform / _.translate;
 					_.slide_index += _.items_slide;
-					_.slide_act = _.slide_arr.slice(
-						_.slide_index - _.items_slide,
-						_.slide_index + _.items
-					);
-					_.slide_not_act = _.slide_arr.slice(
-						_.slide_index - _.items_slide,
-						_.slide_index
-					);
+					_.slide_act = _.slide_arr.slice(_.slide_index - _.items_slide, _.slide_index + _.items);
+					_.slide_not_act = _.slide_arr.slice(_.slide_index - _.items_slide, _.slide_index);
 				} else if (ths_arrow.hasClass('prev') && _.transform > 0) {
 					_.transform -= _.translate;
 					_.dot_index = _.transform / _.translate;
 					_.slide_index -= _.items_slide;
-					_.slide_act = _.slide_arr.slice(
-						_.slide_index,
-						_.slide_index + _.items_slide
-					);
+					_.slide_act = _.slide_arr.slice(_.slide_index, _.slide_index + _.items_slide);
 					_.slide_not_act = _.slide_arr.slice(
 						_.slide_index + _.items,
 						_.slide_index + _.items_slide + _.items
@@ -156,37 +139,19 @@
 					moveX < 0 ? (_.direction = 'prev') : (_.direction = 'next');
 					_.translate = _.old_transform;
 					_.transform = _.translate + moveX;
-					if (
-						_.direction == 'next' &&
-						_.transform < _.slider_inner.width() - _.slide.width() * _.items
-					) {
-						_.dot_index =
-							Math.round(_.transform / (_.translate + _.slide.width())) +
-							_.prev_dot_index;
+					if (_.direction == 'next' && _.transform < _.slider_inner.width() - _.slide.width() * _.items) {
+						_.dot_index = Math.round(_.transform / (_.translate + _.slide.width())) + _.prev_dot_index;
 						_.slide_index =
-							Math.round(_.transform / (_.translate + _.slide.width())) *
-								_.items_slide +
+							Math.round(_.transform / (_.translate + _.slide.width())) * _.items_slide +
 							_.prev_slide_index;
-						_.slide_act = _.slide_arr.slice(
-							_.slide_index - _.items_slide,
-							_.slide_index + _.items
-						);
-						_.slide_not_act = _.slide_arr.slice(
-							_.slide_index - _.items_slide,
-							_.slide_index
-						);
+						_.slide_act = _.slide_arr.slice(_.slide_index - _.items_slide, _.slide_index + _.items);
+						_.slide_not_act = _.slide_arr.slice(_.slide_index - _.items_slide, _.slide_index);
 					} else if (_.direction == 'prev' && _.transform > 0) {
-						_.dot_index =
-							_.prev_dot_index -
-							Math.ceil(_.transform / (_.translate + _.slide.width()));
+						_.dot_index = _.prev_dot_index - Math.ceil(_.transform / (_.translate + _.slide.width()));
 						_.slide_index =
 							_.prev_slide_index -
-							Math.ceil(_.transform / (_.translate + _.slide.width())) *
-								_.items_slide;
-						_.slide_act = _.slide_arr.slice(
-							_.slide_index,
-							_.slide_index + _.items_slide
-						);
+							Math.ceil(_.transform / (_.translate + _.slide.width())) * _.items_slide;
+						_.slide_act = _.slide_arr.slice(_.slide_index, _.slide_index + _.items_slide);
 						_.slide_not_act = _.slide_arr.slice(
 							_.slide_index + _.items,
 							_.slide_index + _.items_slide + _.items
@@ -201,8 +166,7 @@
 						_.loop &&
 						((_.direction == 'prev' && _.transform <= 0) ||
 							(_.direction == 'next' &&
-								_.transform >=
-									_.slider_inner.width() - _.slide.width() * _.items))
+								_.transform >= _.slider_inner.width() - _.slide.width() * _.items))
 					) {
 						_.looping();
 					} else {
@@ -237,37 +201,19 @@
 						moveX < 0 ? (_.direction = 'prev') : (_.direction = 'next');
 						_.translate = _.old_transform;
 						_.transform = _.translate + moveX;
-						if (
-							_.direction == 'next' &&
-							_.transform < _.slider_inner.width() - _.slide.width() * _.items
-						) {
-							_.dot_index =
-								Math.round(_.transform / (_.translate + _.slide.width())) +
-								_.prev_dot_index;
+						if (_.direction == 'next' && _.transform < _.slider_inner.width() - _.slide.width() * _.items) {
+							_.dot_index = Math.round(_.transform / (_.translate + _.slide.width())) + _.prev_dot_index;
 							_.slide_index =
-								Math.round(_.transform / (_.translate + _.slide.width())) *
-									_.items_slide +
+								Math.round(_.transform / (_.translate + _.slide.width())) * _.items_slide +
 								_.prev_slide_index;
-							_.slide_act = _.slide_arr.slice(
-								_.slide_index - _.items_slide,
-								_.slide_index + _.items
-							);
-							_.slide_not_act = _.slide_arr.slice(
-								_.slide_index - _.items_slide,
-								_.slide_index
-							);
+							_.slide_act = _.slide_arr.slice(_.slide_index - _.items_slide, _.slide_index + _.items);
+							_.slide_not_act = _.slide_arr.slice(_.slide_index - _.items_slide, _.slide_index);
 						} else if (_.direction == 'prev' && _.transform > 0) {
-							_.dot_index =
-								_.prev_dot_index -
-								Math.ceil(_.transform / (_.translate + _.slide.width()));
+							_.dot_index = _.prev_dot_index - Math.ceil(_.transform / (_.translate + _.slide.width()));
 							_.slide_index =
 								_.prev_slide_index -
-								Math.ceil(_.transform / (_.translate + _.slide.width())) *
-									_.items_slide;
-							_.slide_act = _.slide_arr.slice(
-								_.slide_index,
-								_.slide_index + _.items_slide
-							);
+								Math.ceil(_.transform / (_.translate + _.slide.width())) * _.items_slide;
+							_.slide_act = _.slide_arr.slice(_.slide_index, _.slide_index + _.items_slide);
 							_.slide_not_act = _.slide_arr.slice(
 								_.slide_index + _.items,
 								_.slide_index + _.items_slide + _.items
@@ -284,8 +230,7 @@
 						_.loop &&
 						((_.direction == 'prev' && _.transform <= 0) ||
 							(_.direction == 'next' &&
-								_.transform >=
-									_.slider_inner.width() - _.slide.width() * _.items))
+								_.transform >= _.slider_inner.width() - _.slide.width() * _.items))
 					) {
 						_.looping();
 					}
@@ -308,24 +253,13 @@
 				_.dot_index = ths_dot.data('page');
 				_.translate = _.slide.width();
 				_.transform = _.slide_index * _.translate;
-				_.prev_slide_index > _.slide_index
-					? (_.direction = 'prev')
-					: (_.direction = 'next');
+				_.prev_slide_index > _.slide_index ? (_.direction = 'prev') : (_.direction = 'next');
 				if (_.direction == 'next') {
-					_.slide_act = _.slide_arr.slice(
-						_.slide_index,
-						_.slide_index + _.items
-					);
-					_.slide_not_act = _.slide_arr.slice(
-						_.prev_slide_index,
-						_.slide_index
-					);
+					_.slide_act = _.slide_arr.slice(_.slide_index, _.slide_index + _.items);
+					_.slide_not_act = _.slide_arr.slice(_.prev_slide_index, _.slide_index);
 				} else if (_.direction == 'prev') {
 					_.slide_act = _.slide_arr.slice(_.slide_index, _.prev_slide_index);
-					_.slide_not_act = _.slide_arr.slice(
-						_.slide_index + _.items,
-						_.prev_slide_index + _.items
-					);
+					_.slide_not_act = _.slide_arr.slice(_.slide_index + _.items, _.prev_slide_index + _.items);
 				}
 				_.dotActive();
 				_.moveTo();
@@ -348,20 +282,14 @@
 					_.dot_index = 0;
 					_.slide_index = 0;
 					_.slide_act = _.slide_arr.slice(_.slide_index);
-					_.slide_not_act = _.slide_arr.slice(
-						_.slide_index + _.items,
-						_.prev_slide_index + _.items
-					);
+					_.slide_not_act = _.slide_arr.slice(_.slide_index + _.items, _.prev_slide_index + _.items);
 				} else if (_.direction == 'prev') {
 					_.dot_index = _.dot.last().data('page');
 					_.translate = _.slide.width();
 					_.transform = _.dot_index * _.items_slide * _.slide.width();
 					_.slide_index = _.transform / _.translate;
 					_.slide_act = _.slide_arr.slice(_.slide_index);
-					_.slide_not_act = _.slide_arr.slice(
-						_.slide_index + _.items,
-						_.prev_slide_index + _.items
-					);
+					_.slide_not_act = _.slide_arr.slice(_.slide_index + _.items, _.prev_slide_index + _.items);
 				}
 				_.dotActive();
 			}
@@ -372,8 +300,7 @@
 					if (_.wind.innerWidth() > key) {
 						_.row = _.responsive.width[key].row || _.row;
 						_.items = _.responsive.width[key].items || _.items;
-						_.items_slide =
-							_.responsive.width[key].items_slide || _.items_slide;
+						_.items_slide = _.responsive.width[key].items_slide || _.items_slide;
 						_.loop = _.responsive.width[key].loop || _.loop;
 						_.automove = _.responsive.width[key].automove || _.automove;
 						_.interval = _.responsive.width[key].interval || _.interval;
@@ -391,8 +318,7 @@
 					if (_.wind.innerHeight() > key) {
 						_.row = _.responsive.height[key].row || prev_row;
 						_.items = _.responsive.height[key].items || prev_items;
-						_.items_slide =
-							_.responsive.height[key].items_slide || prev_items_slide;
+						_.items_slide = _.responsive.height[key].items_slide || prev_items_slide;
 						_.loop = _.responsive.height[key].loop;
 						_.automove = _.responsive.height[key].automove;
 						_.interval = _.responsive.height[key].interval || _.interval;
@@ -418,21 +344,12 @@
 					var prev_dot_index = _.dot_index,
 						prev_slide_index = _.slide_index;
 					_.translate = _.slide.width() * _.items_slide;
-					if (
-						_.transform <
-						_.slider_inner.width() - _.slide.width() * _.items
-					) {
+					if (_.transform < _.slider_inner.width() - _.slide.width() * _.items) {
 						_.transform += _.translate;
 						_.dot_index = _.transform / _.translate;
 						_.slide_index += _.items_slide;
-						_.slide_act = _.slide_arr.slice(
-							_.slide_index - _.items_slide,
-							_.slide_index + _.items
-						);
-						_.slide_not_act = _.slide_arr.slice(
-							_.slide_index - _.items_slide,
-							_.slide_index
-						);
+						_.slide_act = _.slide_arr.slice(_.slide_index - _.items_slide, _.slide_index + _.items);
+						_.slide_not_act = _.slide_arr.slice(_.slide_index - _.items_slide, _.slide_index);
 						_.direction = 'next';
 						_.dotActive();
 						_.moveTo();
@@ -442,10 +359,7 @@
 						_.dot_index = 0;
 						_.slide_index = 0;
 						_.slide_act = _.slide_arr.slice(_.slide_index);
-						_.slide_not_act = _.slide_arr.slice(
-							_.slide_index + _.items,
-							prev_slide_index + _.items
-						);
+						_.slide_not_act = _.slide_arr.slice(_.slide_index + _.items, prev_slide_index + _.items);
 						_.dotActive();
 						_.moveTo();
 					}
@@ -503,9 +417,7 @@
 							var href = ths_link.attr('href'),
 								str = href.substr(1, href.length);
 							if (str != 'clear') {
-								var ths_elements = _.slider_inner.find(
-									'[data-filter="' + str + '"]'
-								);
+								var ths_elements = _.slider_inner.find('[data-filter="' + str + '"]');
 								_.allitems = ths_elements;
 								_.reBuild();
 								_.slider.removeClass('slider-rebuild');
