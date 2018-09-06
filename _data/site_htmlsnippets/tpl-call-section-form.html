@@ -1,0 +1,23 @@
+id: 18
+source: 1
+name: tpl_call_section_form
+description: ''
+category: Формы
+properties: 'a:0:{}'
+
+-----
+
+<form class="flex column align-center xl-4 lg-6 md-8 sm-10 xsm-12">
+	<label class="h3 text-center" for="call-phone">Остались вопросы?</label>
+	<div class="form-group">
+		<input type="text" name="name" placeholder="Ваше имя:" value="{$_modx->getPlaceholder('fi.name')}">
+	</div>
+	<div class="form-group">
+		<input type="text" class="mask-phone" name="phone" id="call-phone" placeholder="Ваш телефон" required value="{$_modx->getPlaceholder('fi.phone')}">
+	</div>
+	<div class="form-group textarea">
+		<textarea name="message" placeholder="Ваше сообщение" value="{$_modx->getPlaceholder('fi.message')}"></textarea>
+	</div>
+	<button class="btn-d-big">Отправить</button>
+	<div class="polit">Нажимая на «Подтвердить» вы даете согласие на<br><a class="open-modal appender" href="#politics">обработку персональных данных</a></div>
+</form>

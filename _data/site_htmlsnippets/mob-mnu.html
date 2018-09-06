@@ -9,7 +9,7 @@ properties: 'a:0:{}'
 <div id="mob-mnu">
 	<div class="topbar flex content-center">
 		<a href="/" class="logo">
-			<img src="assets/img/item.png" alt="multikey.studio" title="multikey.studio">
+			<img src="{1 | resource: 'logo'}" alt="{$_modx->config["site_name"]}" title="{$_modx->config["site_name"]}">
 		</a>
 	</div>
 	<menu>
@@ -35,24 +35,24 @@ properties: 'a:0:{}'
 	<div class="bottombar">
 		<div class="contact flex align-center">
 			<img src="assets/img/phone.svg" alt="Телефон">
-			<a href="tel:+7 (999) 999-99-99" class="link">+7 (999) 999-99-99</a>
+			<a href="tel:{1 | resource: 'phone'}" class="link">{1 | resource: 'phone'}</a>
 		</div>
 		<div class="contact flex align-center">
 			<img src="assets/img/mail.svg" alt="Почта">
-			<a href="emailto:help@multikey.studio" class="link">help@multikey.studio</a>
+			<a href="mailto:{1 | resource: 'mail'}" class="link">{1 | resource: 'mail'}</a>
 		</div>
 		<div class="contact flex align-center">
 			<img src="assets/img/map.svg" alt="Адрес">
-			<a href="" target="_blank" class="link">г. Самара, ул. Некрасовская 78</a>
+			<a href="{1 | resource: 'map_link'}" target="_blank" class="link">{1 | resource: 'address'}</a>
 		</div>
 		<div class="social flex content-center">
-			<a href="" target="_blank">
+			<a href="{1 | resource: 'insta'}" target="_blank">
 				<img src="assets/img/insta.svg" alt="Инстаграмм" title="Инстаграмм">
 			</a>
-			<a href="" target="_blank">
+			<a href="{1 | resource: 'vk'}" target="_blank">
 				<img src="assets/img/vk.svg" alt="Вконтакте" title="Вконтакте">
 			</a>
-			<a href="" target="_blank">
+			<a href="{1 | resource: 'fb'}" target="_blank">
 				<img src="assets/img/fb.svg" alt="Фейсбук" title="Фейсбук">
 			</a>
 		</div>

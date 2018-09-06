@@ -1,0 +1,22 @@
+id: 11
+source: 1
+name: tpl_call_modal_form
+description: ''
+category: Формы
+properties: 'a:0:{}'
+
+-----
+
+<form>
+	<label class="h3 text-d text-center" for="call-phone-modal">Оставьте свои данные и мы свяжемся с вами!</label>
+	<div class="form-group">
+		<input type="text" name="name" placeholder="Ваше имя:" value="{$_modx->getPlaceholder('fi.name')}">
+	</div>
+	<div class="form-group">
+		<input type="text" name="phone" id="call-phone-modal" class="mask-phone" placeholder="Ваш телефон:" required value="{$_modx->getPlaceholder('fi.phone')}">
+	</div>
+	<input type="hidden" name="title" id="hidinput" value="">
+	<input type="hidden" name="email_home" value="">
+	<button class="btn-d-big">Отправить</button>
+	<div class="polit">Нажимая на «Подтвердить» вы даете согласие на<br><a class="open-modal appender" href="#politics">обработку персональных данных</a></div>
+</form>
