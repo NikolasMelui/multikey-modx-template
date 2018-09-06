@@ -204,5 +204,5 @@ packages:
       - ace-1.6.5-pl
       - tinymce-4.3.4-pl
       - translit-1.0.0-beta
-      - FormIt-4.1.0-pl
-      - AjaxForm-1.1.9-pl
+      - formit-4.1.0-pl
+      - ajaxform-1.1.9-pl
