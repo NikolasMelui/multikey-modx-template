@@ -1,0 +1,17 @@
+image: williamyeh/ansible:mini-alpine3
+
+deploy_production:
+  stage: deploy
+  environment:
+    name: production
+    url: $PRODUCTION_URL
+  before_script:
+    - apk add --update openssh-client -y
+    - eval $(ssh-agent -s)
+    - echo "$MULTIKEY_SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+  script:
+    - ssh -o StrictHostKeyChecking=no $MULTIKEY_USER_NAME@$MULTIKEY_REMOTE_ADDRESS "cd ./$WORK_DIR/public_html; git checkout master; git pull origin master; /opt/php7.1/bin/php ../../Gitify/Gitify build --force; /opt/php7.1/bin/php ../../Gitify/Gitify build --force"
+  only:
+    - master
