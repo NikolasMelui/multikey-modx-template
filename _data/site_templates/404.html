@@ -1,0 +1,31 @@
+id: 2
+templatename: '404'
+properties: 'a:0:{}'
+
+-----
+
+<!DOCTYPE html>
+<html lang="ru">
+{include 'head'}
+<body>
+  {include 'mob-mnu'}
+  <div class="page">
+    {include 'fixed-elements'}
+    {include 'header'}
+    <div class="screen-scroll" id="scroll-container">
+			<section class="sect main-sect" id="sect-1" style="background-image: url({$_modx->resource["page_image"]})">
+				<div class="cont-fluid column align-center">
+          <h1>Страница не найдена</h1>
+          <a href="/">Перейти на главную</a>
+				</div>
+			</section>
+		</div>
+  	<div id="Hidden__Container">
+  		{include 'call_modal'}
+		  {include 'politics'}
+  	</div>
+	</div>
+	{include 'scripts-css'}
+	{include '__browserSync'}
+</body>
+</html>
